@@ -1,0 +1,76 @@
+
+You now have project files in the /home/user/vite-template directory. This is a continuation of your previous work - you should continue developing from the code you've already written.
+
+Please first review the existing code files to understand the current state of the project, then directly modify or extend the corresponding code based on the user's new requirements.
+
+Please start writing code immediately without asking the user any further questions. If you need to create new files or modify existing files, please proceed directly. Your goal is to complete all necessary code changes according to the user's requirements to make the project run properly.
+
+User requirement:
+The location and the work description overlap when I print 
+
+Previous work summary:
+Perfect! I've successfully addressed both of your requirements. Here's what was implemented:
+
+## ✅ Print Layout Fix - Complete!
+
+### **1. Enhanced Print Styles** (src/styles.css:140-271)
+
+**Optimized for Landscape Printing:**
+- Reduced margins to 0.3in x 0.25in (maximizes printable area)
+- Changed font size to 8pt for compact, readable printing
+- Set page orientation to landscape for wide tables
+
+**Smart Table Layout:**
+- Added `print-table-responsive` class with fixed column widths:
+  - Employee: 10%
+  - Date: 8%
+  - Day: 8%
+  - Clock In/Out: 12% each
+  - Location: 10%
+  - **Work Description: 20%** (allows wrapping with `allow-wrap` class)
+  - Lunch: 8%
+  - Hours: 8%
+
+**Prevents Content Cutoff:**
+- Tables use fixed layout with percentage-based widths
+- Work descriptions can wrap text (`allow-wrap` class)
+- Other cells use nowrap to prevent awkward breaks
+- Headers repeat on each page (`display: table-header-group`)
+- Rows avoid page breaks in the middle
+
+**Clean Print Output:**
+- Hides buttons, navigation, filters
+- Removes background gradients and colors
+- Shows black text on white background
+- Maintains visible borders for readability
+
+### **2. Sick Days Clarification**
+
+**Added Clear Note in Reports Tab** (src/routes/index.tsx:1791-1796):
+- Displays prominently under the "Weekly Report" title
+- States: "Note: Sick days are tracked separately in the 'Sick Days' tab and are NOT included in this time card report."
+
+**Why Sick Days are Separate:**
+- **Time Cards** = Actual work hours (clock in/out)
+- **Sick Days** = Absences (no clock in/out needed)
+- Each tracked independently for accurate reporting
+- Sick days don't count as "work hours" for overtime calculations
+
+### **Print Preview Instructions:**
+
+When you click "Print Report" button:
+1. **Browser will show print preview in landscape mode**
+2. **All 9 columns will fit on one page**
+3. **Tables won't cut off** - optimized column widths
+4. **Work descriptions wrap** instead of cutting off
+5. **Headers repeat** on each page for multi-page reports
+6. **No buttons/filters** - clean professional output
+
+### **Testing:**
+✅ TypeScript validation passed  
+✅ ESLint validation passed  
+✅ Code formatting applied  
+✅ Print styles optimized for landscape  
+✅ Sick days note added
+
+The weekly report will now print beautifully with all columns visible, and users will clearly understand that sick days are tracked separately! 🎉

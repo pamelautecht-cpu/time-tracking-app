@@ -1,0 +1,22 @@
+[
+  {
+    "content": "Initialize git and commit time-tracking code",
+    "status": "completed",
+    "activeForm": "Initializing git and committing time-tracking code"
+  },
+  {
+    "content": "Create deployment guides",
+    "status": "completed",
+    "activeForm": "Creating deployment guides"
+  },
+  {
+    "content": "Wait for user to provide GitHub info",
+    "status": "in_progress",
+    "activeForm": "Waiting for user to provide GitHub info"
+  },
+  {
+    "content": "Push to GitHub and verify deployment",
+    "status": "pending",
+    "activeForm": "Pushing to GitHub and verifying deployment"
+  }
+]

@@ -1,0 +1,145 @@
+================================================================================
+                    🎯 DEPLOY TO VERCEL - 2 METHODS
+================================================================================
+
+Choose ONE method below:
+
+================================================================================
+METHOD 1: Website (Easiest - No Command Line) ⭐ RECOMMENDED
+================================================================================
+
+STEP 1: Go to Vercel
+--------------------
+On your desktop, open browser and go to:
+https://vercel.com
+
+STEP 2: Sign Up
+---------------
+Click "Sign Up" → Choose one:
+- Continue with GitHub
+- Continue with GitLab  
+- Continue with Email
+
+Follow prompts to create account.
+
+STEP 3: Deploy Your App
+------------------------
+1. In Vercel Dashboard, click "Add New..." → "Project"
+2. You'll see "Import Git Repository" page
+3. Look for upload/drag-drop option (scroll down if needed)
+4. Open your file explorer
+5. Find your "vite-template" folder
+6. Drag it onto the Vercel page
+7. OR click "Browse" and select the folder
+
+STEP 4: Configure
+-----------------
+Project Name: time-tracking
+Framework: Vite (should auto-detect)
+Build Command: npm run build (should auto-fill)
+Output Directory: dist (should auto-fill)
+
+Click "Deploy"!
+
+STEP 5: Wait
+------------
+Wait 1-2 minutes for deployment to complete.
+
+STEP 6: Get Your URL
+--------------------
+You'll see your URL like:
+https://time-tracking-xyz.vercel.app
+
+COPY THIS URL!
+
+STEP 7: Use on Phone
+--------------------
+On your phone:
+1. Open browser
+2. Go to your Vercel URL
+3. NO MORE 404! ✅
+
+See VERCEL_STEP_BY_STEP.md for detailed instructions with screenshots.
+
+================================================================================
+METHOD 2: Command Line (Advanced)
+================================================================================
+
+STEP 1: Login
+-------------
+Run this command:
+vercel login
+
+Enter your email when prompted.
+Check your email and click verification link.
+
+STEP 2: Deploy
+--------------
+Run this command:
+vercel --prod
+
+Follow the prompts:
+- Set up and deploy? Y
+- Link to existing project? N
+- Project name? time-tracking
+- Auto-detected settings? Y
+
+Wait 1-2 minutes.
+
+STEP 3: Get Your URL
+--------------------
+Copy the URL shown (like https://time-tracking-xyz.vercel.app)
+
+STEP 4: Use on Phone
+--------------------
+On your phone, go to that URL - NO MORE 404! ✅
+
+OR use the automated script:
+./deploy-to-vercel.sh
+
+================================================================================
+AFTER DEPLOYMENT
+================================================================================
+
+1. Open your Vercel URL on phone
+2. Install as app:
+   - iPhone: Safari → Share → "Add to Home Screen"
+   - Android: Chrome → Menu → "Add to Home screen"
+3. Get employee link:
+   - Open app → Manager → Add employee
+   - Employee view → "Copy My Link"
+   - Send to phone → Click link → Auto-login! ✅
+
+================================================================================
+WHY VERCEL?
+================================================================================
+
+✅ Works on ANY device (phone, tablet, computer)
+✅ Works ANYWHERE (home, work, travel)
+✅ Works ALL THE TIME (even when computer is off)
+✅ Works on WiFi or cellular data
+✅ FREE forever
+✅ Professional URL
+✅ No more 404 errors!
+
+Local IP (http://169.254.0.21:3000):
+❌ Only works on same WiFi
+❌ Only works when computer is on
+❌ Can't share easily
+
+Vercel (https://time-tracking.vercel.app):
+✅ Everything works everywhere!
+
+================================================================================
+READY?
+================================================================================
+
+Go to: https://vercel.com
+
+Follow: VERCEL_STEP_BY_STEP.md for detailed guide
+
+OR
+
+Run: ./deploy-to-vercel.sh for automated deployment
+
+================================================================================

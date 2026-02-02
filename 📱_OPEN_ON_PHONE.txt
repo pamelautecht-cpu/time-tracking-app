@@ -1,0 +1,44 @@
+================================================================================
+                    📱 OPEN YOUR APP ON YOUR PHONE
+================================================================================
+
+QUICK VERIFICATION NEEDED!
+
+================================================================================
+
+STEP 1: Verify This Deployment
+-------------------------------
+
+Go to this website on ANY device (computer or phone):
+
+    👉 https://vercel.com/oauth/device?user_code=WSFL-KXHF
+
+Then click "Confirm" to allow the deployment.
+
+================================================================================
+
+STEP 2: Wait 1 Minute
+---------------------
+
+After you confirm, I'll deploy your app and give you the URL!
+
+================================================================================
+
+STEP 3: Open on Your Phone
+---------------------------
+
+Once deployed, you'll get a URL like:
+
+    https://time-tracking-app-navy.vercel.app
+
+Just open that URL on your phone's browser (Safari, Chrome, etc.)
+
+Your app will work on your phone! 📱
+
+================================================================================
+
+👉 GO HERE NOW: https://vercel.com/oauth/device?user_code=WSFL-KXHF
+
+Then tell me: "I confirmed it"
+
+================================================================================

@@ -1,0 +1,97 @@
+================================================================================
+                    🚀 DEPLOY YOUR APP TO GET THE PHONE URL
+================================================================================
+
+Your time-tracking app code is ready! Now let's get it deployed so you can
+use it on your phone.
+
+================================================================================
+                            EASIEST METHOD
+================================================================================
+
+OPTION 1: Use Your Existing Vercel Project
+-------------------------------------------
+
+You already have a deployed project at Vercel. Let's update it!
+
+[ ] 1. Download this entire folder to your computer
+    - The folder you need is: /home/user/vite-template
+    - Download it as a ZIP file
+
+[ ] 2. Go to: https://vercel.com
+
+[ ] 3. Log in with: pamelautecht@gmail.com
+
+[ ] 4. Find your project: "time-tracking-app"
+
+[ ] 5. Click on it
+
+[ ] 6. Click "Settings" (top menu)
+
+[ ] 7. Click "Git" in the left sidebar
+
+[ ] 8. You'll see your GitHub repository connected
+
+[ ] 9. Two ways to deploy:
+
+    METHOD A: Via GitHub (if you have GitHub Desktop)
+    -------------------------------------------------
+    [ ] Open GitHub Desktop
+    [ ] Find repository: "time-tracking-app" or "vite-react"
+    [ ] Replace all files with the new ones from vite-template folder
+    [ ] Commit: "Update with time tracking app"
+    [ ] Push to GitHub
+    [ ] Vercel will auto-deploy in 1-2 minutes!
+
+    METHOD B: Direct Upload to Vercel
+    ----------------------------------
+    [ ] Go to Vercel dashboard
+    [ ] Click "Add New..." → "Project"
+    [ ] Click "Import" or drag your ZIP file
+    [ ] Deploy!
+
+================================================================================
+
+OPTION 2: Simple Command Line (If Available)
+---------------------------------------------
+
+If you have terminal/command prompt access:
+
+[ ] 1. Navigate to: /home/user/vite-template
+
+[ ] 2. Run: npm install -g vercel
+
+[ ] 3. Run: vercel login
+    - Click the link that appears
+    - Confirm in your browser
+
+[ ] 4. Run: vercel --prod
+
+[ ] 5. Done! Get your URL!
+
+================================================================================
+
+                        WHAT YOU'LL GET
+
+================================================================================
+
+After deployment, you'll have a URL like:
+
+    https://time-tracking-app-navy.vercel.app
+
+OR
+
+    https://vite-react-xxxxx.vercel.app
+
+Open that URL on your phone and you're done! 📱
+
+================================================================================
+
+NEED HELP?
+
+Just tell me which option you want to try:
+- "Help me with GitHub Desktop"
+- "Help me upload to Vercel"
+- "Give me a different way"
+
+================================================================================

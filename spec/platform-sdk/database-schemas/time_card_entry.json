@@ -1,0 +1,241 @@
+{
+  "id": "102019c0b2223aa7ec9a3b374f90d22bdb3",
+  "version": "102019c0b2223aa7d48861f29fd16a991e4",
+  "schema": {
+    "name": "time_card_entry",
+    "description": "Records a specific work shift entry with clock-in and clock-out times, including lunch break tracking.",
+    "fields": [
+      {
+        "name": "id",
+        "description": "Unique identifier for the time card entry (UUID).",
+        "type": 1,
+        "compliance": {
+          "confidentiality": 1,
+          "reason": "Public identifier"
+        }
+      },
+      {
+        "name": "data_creator",
+        "description": "id of the user who creates the record",
+        "type": 1,
+        "compliance": {
+          "confidentiality": 2,
+          "reason": "Internal audit"
+        }
+      },
+      {
+        "name": "data_updater",
+        "description": "id of the user who updates the record",
+        "type": 1,
+        "compliance": {
+          "confidentiality": 2,
+          "reason": "Internal audit"
+        }
+      },
+      {
+        "name": "create_time",
+        "description": "create time in timestamp unix",
+        "type": 1,
+        "compliance": {
+          "confidentiality": 1,
+          "reason": "System timestamp"
+        },
+        "format": "timestamp"
+      },
+      {
+        "name": "update_time",
+        "description": "update time in timestamp unix",
+        "type": 1,
+        "compliance": {
+          "confidentiality": 1,
+          "reason": "System timestamp"
+        },
+        "format": "timestamp"
+      },
+      {
+        "name": "user_id",
+        "description": "ID of the user this time card belongs to.",
+        "type": 1,
+        "compliance": {
+          "confidentiality": 2,
+          "reason": "Internal reference"
+        }
+      },
+      {
+        "name": "clock_in_timestamp",
+        "description": "Timestamp when the shift started.",
+        "type": 1,
+        "compliance": {
+          "confidentiality": 2,
+          "reason": "Business data"
+        },
+        "format": "timestamp"
+      },
+      {
+        "name": "clock_out_timestamp",
+        "description": "Timestamp when the shift ended. Null implies an active shift.",
+        "type": 1,
+        "compliance": {
+          "confidentiality": 2,
+          "reason": "Business data"
+        },
+        "nullable": true,
+        "format": "timestamp"
+      },
+      {
+        "name": "location",
+        "description": "Where the employee worked that day.",
+        "type": 1,
+        "compliance": {
+          "confidentiality": 2,
+          "reason": "Business data"
+        },
+        "nullable": true
+      },
+      {
+        "name": "work_description",
+        "description": "What work the employee did that day.",
+        "type": 1,
+        "compliance": {
+          "confidentiality": 2,
+          "reason": "Business data"
+        },
+        "nullable": true
+      },
+      {
+        "name": "notes",
+        "description": "Optional text notes regarding the shift.",
+        "type": 1,
+        "compliance": {
+          "confidentiality": 2,
+          "reason": "Employee comments"
+        },
+        "nullable": true
+      },
+      {
+        "name": "lunch_start_timestamp",
+        "description": "Timestamp when employee started lunch break.",
+        "type": 1,
+        "compliance": {
+          "confidentiality": 2,
+          "reason": "Business data"
+        },
+        "nullable": true,
+        "format": "timestamp"
+      },
+      {
+        "name": "lunch_end_timestamp",
+        "description": "Timestamp when employee ended lunch break.",
+        "type": 1,
+        "compliance": {
+          "confidentiality": 2,
+          "reason": "Business data"
+        },
+        "nullable": true,
+        "format": "timestamp"
+      },
+      {
+        "name": "lunch_duration_minutes",
+        "description": "Total lunch break duration in minutes.",
+        "type": 2,
+        "compliance": {
+          "confidentiality": 2,
+          "reason": "Business data"
+        },
+        "nullable": true,
+        "numeric": "float"
+      },
+      {
+        "name": "total_hours",
+        "description": "Calculated duration of the shift in hours.",
+        "type": 2,
+        "compliance": {
+          "confidentiality": 2,
+          "reason": "Business data"
+        },
+        "nullable": true,
+        "numeric": "float"
+      }
+    ],
+    "indexes": [
+      {
+        "fields": [
+          "id"
+        ],
+        "unique": true,
+        "primary": true,
+        "order": false
+      },
+      {
+        "fields": [
+          "user_id"
+        ],
+        "order": false
+      },
+      {
+        "fields": [
+          "clock_in_timestamp"
+        ],
+        "order": true
+      },
+      {
+        "fields": [
+          "clock_in_timestamp",
+          "user_id"
+        ],
+        "order": true
+      },
+      {
+        "fields": [
+          "clock_out_timestamp"
+        ],
+        "order": false
+      },
+      {
+        "fields": [
+          "location"
+        ],
+        "order": false
+      },
+      {
+        "fields": [
+          "data_creator"
+        ],
+        "order": false
+      },
+      {
+        "fields": [
+          "data_updater"
+        ],
+        "order": false
+      }
+    ],
+    "relations": [
+      {
+        "referencing_fields": [
+          "user_id"
+        ],
+        "referenced_entity": {
+          "name": "user"
+        },
+        "referenced_fields": [
+          "id"
+        ],
+        "cascade": true
+      }
+    ]
+  },
+  "task": {
+    "id": "697bad24d76bb0123cb88e9c",
+    "root": "6979037d768a7cf710e2a1b8",
+    "project": "6979037d768a7cf710e2a1b7",
+    "user": "38c1d360-e051-70bf-b429-cc4c6d02d858"
+  },
+  "namespace": {
+    "id": "01987547fc6c72ecb453bd2736bd4ea0",
+    "tenant": 2,
+    "name": "global-1",
+    "default": true
+  },
+  "revision": 1
+}

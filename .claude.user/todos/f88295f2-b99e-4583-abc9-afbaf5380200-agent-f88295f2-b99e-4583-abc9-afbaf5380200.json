@@ -1,0 +1,22 @@
+[
+  {
+    "content": "Fix build configuration for Vercel",
+    "status": "completed",
+    "activeForm": "Fixing build configuration for Vercel"
+  },
+  {
+    "content": "Rebuild production app with correct paths",
+    "status": "completed",
+    "activeForm": "Rebuilding production app with correct paths"
+  },
+  {
+    "content": "Create Vercel deployment guide",
+    "status": "completed",
+    "activeForm": "Creating Vercel deployment guide"
+  },
+  {
+    "content": "Provide actionable next steps",
+    "status": "in_progress",
+    "activeForm": "Providing actionable next steps"
+  }
+]

@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Time Clock</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+
+        .employee-name {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f3f4f6;
+            border-radius: 10px;
+        }
+
+        .status {
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .status.clocked-out {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+
+        .status.clocked-in {
+            background: #d1fae5;
+            color: #065f46;
+        }
+
+        .time-display {
+            font-size: 48px;
+            font-weight: bold;
+            color: #667eea;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 20px;
+            border: none;
+            border-radius: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-bottom: 15px;
+            transition: all 0.3s;
+        }
+
+        .btn-clock-in {
+            background: #10b981;
+            color: white;
+        }
+
+        .btn-clock-in:active {
+            background: #059669;
+            transform: scale(0.98);
+        }
+
+        .btn-clock-out {
+            background: #ef4444;
+            color: white;
+        }
+
+        .btn-clock-out:active {
+            background: #dc2626;
+            transform: scale(0.98);
+        }
+
+        .btn-manager {
+            background: #667eea;
+            color: white;
+            padding: 15px;
+            font-size: 16px;
+        }
+
+        .btn-manager:active {
+            background: #5568d3;
+        }
+
+        .history {
+            margin-top: 20px;
+        }
+
+        .history-item {
+            padding: 15px;
+            background: #f9fafb;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            border-left: 4px solid #667eea;
+        }
+
+        .history-date {
+            font-weight: bold;
+            color: #374151;
+            margin-bottom: 5px;
+        }
+
+        .history-times {
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        .manager-view {
+            display: none;
+        }
+
+        .employee-card {
+            background: #f9fafb;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            border-left: 4px solid #10b981;
+        }
+
+        .employee-card.active {
+            border-left-color: #ef4444;
+            background: #fef2f2;
+        }
+
+        .lang-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <button class="lang-toggle" onclick="toggleLanguage()">🌐 <span id="langText">ES</span></button>
+
+    <div class="container">
+        <!-- Employee View -->
+        <div id="employeeView">
+            <div class="card">
+                <h1 id="title">⏰ Time Clock</h1>
+                <div class="employee-name" id="employeeName">Select Employee</div>
+
+                <div class="status clocked-out" id="status">Not Clocked In</div>
+
+                <div class="time-display" id="currentTime">--:--:--</div>
+
+                <button class="btn btn-clock-in" id="clockInBtn" onclick="clockIn()" style="display: none;">
+                    🟢 <span id="clockInText">Clock In</span>
+                </button>
+
+                <button class="btn btn-clock-out" id="clockOutBtn" onclick="clockOut()" style="display: none;">
+                    🔴 <span id="clockOutText">Clock Out</span>
+                </button>
+
+                <button class="btn btn-manager" onclick="showManager()">
+                    👤 <span id="managerText">Manager View</span>
+                </button>
+            </div>
+
+            <div class="card">
+                <h2 id="historyTitle">📋 Your Time Cards</h2>
+                <div id="history" class="history"></div>
+            </div>
+        </div>
+
+        <!-- Manager View -->
+        <div id="managerView" class="manager-view">
+            <div class="card">
+                <h1>👔 Manager Dashboard</h1>
+                <button class="btn btn-manager" onclick="showEmployee()">
+                    ← <span id="backText">Back to Clock</span>
+                </button>
+                <div id="allEmployees"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let lang = 'en';
+        let currentUser = null;
+
+        const translations = {
+            en: {
+                title: '⏰ Time Clock',
+                selectEmployee: 'Select Employee',
+                notClockedIn: 'Not Clocked In',
+                clockedIn: 'Clocked In',
+                clockIn: 'Clock In',
+                clockOut: 'Clock Out',
+                managerView: 'Manager View',
+                historyTitle: '📋 Your Time Cards',
+                backText: 'Back to Clock',
+                clockedInAt: 'Clocked in at',
+                clockedOutAt: 'Clocked out at',
+                hours: 'hours'
+            },
+            es: {
+                title: '⏰ Reloj de Tiempo',
+                selectEmployee: 'Seleccionar Empleado',
+                notClockedIn: 'No Registrado',
+                clockedIn: 'Registrado',
+                clockIn: 'Registrar Entrada',
+                clockOut: 'Registrar Salida',
+                managerView: 'Vista de Gerente',
+                historyTitle: '📋 Tus Tarjetas de Tiempo',
+                backText: 'Volver al Reloj',
+                clockedInAt: 'Entrada a las',
+                clockedOutAt: 'Salida a las',
+                hours: 'horas'
+            }
+        };
+
+        // Get employee from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const employeeName = urlParams.get('employee');
+        const employeeEmail = urlParams.get('email');
+
+        // Initialize
+        if (employeeName) {
+            currentUser = {
+                name: employeeName,
+                email: employeeEmail || '',
+                id: employeeName.toLowerCase().replace(/\s/g, '')
+            };
+            document.getElementById('employeeName').textContent = employeeName;
+        }
+
+        // Update time display
+        function updateTime() {
+            const now = new Date();
+            const timeStr = now.toLocaleTimeString('en-US', { hour12: true });
+            document.getElementById('currentTime').textContent = timeStr;
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+
+        // Check clock status
+        function checkStatus() {
+            if (!currentUser) return;
+
+            const timeCards = JSON.parse(localStorage.getItem('timeCards') || '[]');
+            const userCards = timeCards.filter(c => c.userId === currentUser.id);
+            const activeCard = userCards.find(c => !c.clockOut);
+
+            if (activeCard) {
+                document.getElementById('status').textContent = translations[lang].clockedIn;
+                document.getElementById('status').className = 'status clocked-in';
+                document.getElementById('clockInBtn').style.display = 'none';
+                document.getElementById('clockOutBtn').style.display = 'block';
+            } else {
+                document.getElementById('status').textContent = translations[lang].notClockedIn;
+                document.getElementById('status').className = 'status clocked-out';
+                document.getElementById('clockInBtn').style.display = 'block';
+                document.getElementById('clockOutBtn').style.display = 'none';
+            }
+
+            loadHistory();
+        }
+
+        // Clock In
+        function clockIn() {
+            if (!currentUser) {
+                alert('Please select an employee first!');
+                return;
+            }
+
+            const timeCards = JSON.parse(localStorage.getItem('timeCards') || '[]');
+            const newCard = {
+                id: Date.now(),
+                userId: currentUser.id,
+                userName: currentUser.name,
+                clockIn: new Date().toISOString(),
+                clockOut: null
+            };
+
+            timeCards.push(newCard);
+            localStorage.setItem('timeCards', JSON.stringify(timeCards));
+
+            checkStatus();
+        }
+
+        // Clock Out
+        function clockOut() {
+            if (!currentUser) return;
+
+            const timeCards = JSON.parse(localStorage.getItem('timeCards') || '[]');
+            const activeCard = timeCards.find(c => c.userId === currentUser.id && !c.clockOut);
+
+            if (activeCard) {
+                activeCard.clockOut = new Date().toISOString();
+
+                // Calculate hours
+                const clockIn = new Date(activeCard.clockIn);
+                const clockOut = new Date(activeCard.clockOut);
+                activeCard.hours = ((clockOut - clockIn) / (1000 * 60 * 60)).toFixed(2);
+
+                localStorage.setItem('timeCards', JSON.stringify(timeCards));
+                checkStatus();
+            }
+        }
+
+        // Load History
+        function loadHistory() {
+            if (!currentUser) return;
+
+            const timeCards = JSON.parse(localStorage.getItem('timeCards') || '[]');
+            const userCards = timeCards.filter(c => c.userId === currentUser.id).reverse();
+
+            const historyDiv = document.getElementById('history');
+            historyDiv.innerHTML = '';
+
+            userCards.forEach(card => {
+                const div = document.createElement('div');
+                div.className = 'history-item';
+
+                const clockInTime = new Date(card.clockIn).toLocaleString();
+                const clockOutTime = card.clockOut ? new Date(card.clockOut).toLocaleString() : 'Still Clocked In';
+
+                div.innerHTML = `
+                    <div class="history-date">${new Date(card.clockIn).toLocaleDateString()}</div>
+                    <div class="history-times">
+                        ${translations[lang].clockedInAt}: ${clockInTime}<br>
+                        ${card.clockOut ? `${translations[lang].clockedOutAt}: ${clockOutTime}<br>${card.hours} ${translations[lang].hours}` : '⏳ Active'}
+                    </div>
+                `;
+
+                historyDiv.appendChild(div);
+            });
+        }
+
+        // Show Manager View
+        function showManager() {
+            document.getElementById('employeeView').style.display = 'none';
+            document.getElementById('managerView').style.display = 'block';
+            loadAllEmployees();
+        }
+
+        // Show Employee View
+        function showEmployee() {
+            document.getElementById('employeeView').style.display = 'block';
+            document.getElementById('managerView').style.display = 'none';
+        }
+
+        // Load All Employees
+        function loadAllEmployees() {
+            const timeCards = JSON.parse(localStorage.getItem('timeCards') || '[]');
+            const employeesDiv = document.getElementById('allEmployees');
+            employeesDiv.innerHTML = '<h3 style="margin: 20px 0;">All Employees</h3>';
+
+            // Group by employee
+            const byEmployee = {};
+            timeCards.forEach(card => {
+                if (!byEmployee[card.userId]) {
+                    byEmployee[card.userId] = {
+                        name: card.userName,
+                        cards: [],
+                        active: null
+                    };
+                }
+                byEmployee[card.userId].cards.push(card);
+                if (!card.clockOut) {
+                    byEmployee[card.userId].active = card;
+                }
+            });
+
+            // Display each employee
+            Object.values(byEmployee).forEach(emp => {
+                const totalHours = emp.cards.reduce((sum, c) => sum + (parseFloat(c.hours) || 0), 0);
+
+                const div = document.createElement('div');
+                div.className = emp.active ? 'employee-card active' : 'employee-card';
+                div.innerHTML = `
+                    <strong>${emp.name}</strong><br>
+                    ${emp.active ? '🔴 Currently Clocked In' : '⚪ Not Clocked In'}<br>
+                    Total Hours: ${totalHours.toFixed(2)}<br>
+                    Time Cards: ${emp.cards.length}
+                `;
+
+                employeesDiv.appendChild(div);
+            });
+        }
+
+        // Toggle Language
+        function toggleLanguage() {
+            lang = lang === 'en' ? 'es' : 'en';
+            document.getElementById('langText').textContent = lang === 'en' ? 'ES' : 'EN';
+
+            // Update all text
+            document.getElementById('title').textContent = translations[lang].title;
+            document.getElementById('clockInText').textContent = translations[lang].clockIn;
+            document.getElementById('clockOutText').textContent = translations[lang].clockOut;
+            document.getElementById('managerText').textContent = translations[lang].managerView;
+            document.getElementById('historyTitle').textContent = translations[lang].historyTitle;
+            document.getElementById('backText').textContent = translations[lang].backText;
+
+            if (!currentUser) {
+                document.getElementById('employeeName').textContent = translations[lang].selectEmployee;
+            }
+
+            checkStatus();
+        }
+
+        // Initialize
+        checkStatus();
+    </script>
+</body>
+</html>

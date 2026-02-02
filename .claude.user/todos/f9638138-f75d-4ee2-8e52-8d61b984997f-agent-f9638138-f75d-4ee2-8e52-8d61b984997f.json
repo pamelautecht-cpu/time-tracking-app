@@ -1,0 +1,27 @@
+[
+  {
+    "content": "Initialize git and configure",
+    "status": "completed",
+    "activeForm": "Initializing git and configuring"
+  },
+  {
+    "content": "Commit all code to git",
+    "status": "completed",
+    "activeForm": "Committing all code to git"
+  },
+  {
+    "content": "Push code to GitHub",
+    "status": "completed",
+    "activeForm": "Pushing code to GitHub"
+  },
+  {
+    "content": "Guide user through Vercel deployment",
+    "status": "completed",
+    "activeForm": "Guiding user through Vercel deployment"
+  },
+  {
+    "content": "Get the deployed URL and test on phone",
+    "status": "in_progress",
+    "activeForm": "Getting the deployed URL and testing on phone"
+  }
+]

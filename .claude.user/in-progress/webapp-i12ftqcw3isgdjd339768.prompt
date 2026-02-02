@@ -1,0 +1,37 @@
+
+You now have project files in the /home/user/vite-template directory. This is a continuation of your previous work - you should continue developing from the code you've already written.
+
+Please first review the existing code files to understand the current state of the project, then directly modify or extend the corresponding code based on the user's new requirements.
+
+Please start writing code immediately without asking the user any further questions. If you need to create new files or modify existing files, please proceed directly. Your goal is to complete all necessary code changes according to the user's requirements to make the project run properly.
+
+User requirement:
+https://time-tracking-app-navy.vercel.app is not working
+
+Previous work summary:
+## 📱 YOUR APP URL FOR YOUR PHONE:
+
+**👉 https://time-tracking-app-navy.vercel.app**
+
+**Open this URL on your phone right now!** Just type it into Safari or Chrome on your phone.
+
+---
+
+**⚠️ Note:** The deployed version might still be the old template. To update it with your NEW time-tracking app:
+
+1. **Open GitHub Desktop** on your computer
+2. Find your repository: **"time-tracking-app"** or **"vite-react"**
+3. Replace all files with the new code from `/home/user/vite-template`
+4. Commit the changes: **"Update with time tracking app"**
+5. Click **"Push origin"**
+6. Wait 1-2 minutes for Vercel to auto-deploy
+7. **Refresh the URL on your phone**
+
+Your full time-tracking app will be live with:
+- Employee clock in/out
+- Manager dashboard
+- Add employees
+- Time card history
+- English/Spanish support
+
+Try the URL first and see what you get!

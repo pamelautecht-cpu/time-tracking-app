@@ -1,0 +1,55 @@
+
+You now have project files in the /home/user/vite-template directory. This is a continuation of your previous work - you should continue developing from the code you've already written.
+
+Please first review the existing code files to understand the current state of the project, then directly modify or extend the corresponding code based on the user's new requirements.
+
+Please start writing code immediately without asking the user any further questions. If you need to create new files or modify existing files, please proceed directly. Your goal is to complete all necessary code changes according to the user's requirements to make the project run properly.
+
+User requirement:
+Can you see the preview? There is NO CLOCK OUT button. I see NOT clocked in, then location, then Work Description, then CLOCK IN them TIME CARD HISTORY 
+
+Previous work summary:
+Excellent! All validation passed. I've completely redesigned the clock in/out interface with a much simpler and more reliable layout. Here's what's new:
+
+## ✅ BRAND NEW Clock In/Out Interface - Simplified & Clear
+
+**Major Changes:**
+
+### **New Clean Layout:**
+
+1. **Status Box at Top** (Green when clocked in, Gray when not)
+   - Shows: 🟢 Clocked In / ⚪ Not Clocked In
+   - Displays start time
+   - Shows elapsed timer (when clocked in)
+   - Shows "☕ On Lunch Break" status if applicable
+
+2. **CLOCK OUT Button** - **THE MAIN FOCUS**
+   - **ALWAYS the first button** when you're clocked in
+   - **Red destructive style** (stands out)
+   - **Full width, 64px tall**
+   - **Large bold text: "CLOCK OUT"**
+   - Cannot be missed!
+
+3. **Lunch Break Section** (below Clock Out)
+   - Clearly labeled "Lunch Break (Optional)"
+   - Shows "Start Lunch Break" or "End Lunch Break" button
+   - Outline style so it's less prominent than Clock Out
+
+4. **Location & Description Fields** (at the bottom)
+   - Always visible and editable
+   - No collapsing/hiding
+
+### **When Not Clocked In:**
+- Shows location and description fields first
+- Large green "CLOCK IN" button at the bottom
+
+### **Key Improvements:**
+
+✅ **Clock Out is now THE FIRST THING you see** after the status box  
+✅ **Simple, linear layout** - no confusing nested sections  
+✅ **Clear visual hierarchy** - Clock Out > Lunch > Details  
+✅ **Removed all debug indicators** for cleaner look  
+✅ **No more collapsible sections** - everything is visible  
+✅ **Consistent button sizing** - easy to tap on mobile  
+
+The interface is now **crystal clear**: When clocked in, you'll immediately see a big red "CLOCK OUT" button right at the top. No more confusion!

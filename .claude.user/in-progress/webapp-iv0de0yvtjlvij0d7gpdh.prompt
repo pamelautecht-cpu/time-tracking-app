@@ -1,0 +1,48 @@
+
+You now have project files in the /home/user/vite-template directory. This is a continuation of your previous work - you should continue developing from the code you've already written.
+
+Please first review the existing code files to understand the current state of the project, then directly modify or extend the corresponding code based on the user's new requirements.
+
+Please start writing code immediately without asking the user any further questions. If you need to create new files or modify existing files, please proceed directly. Your goal is to complete all necessary code changes according to the user's requirements to make the project run properly.
+
+User requirement:
+I followed the instructions, and it's not clocking me in to clock me out. Can I do this in the preview 
+
+Previous work summary:
+Perfect! Now let me explain what you're seeing and how it works:
+
+## ✅ How the Clock In/Out Interface Works
+
+### **What you're seeing now (NOT CLOCKED IN state):**
+
+You're currently seeing:
+1. **Blue status box** with "⚪ NOT CLOCKED IN"
+2. **Instruction text**: "👇 Fill out the form below and click CLOCK IN"
+3. **Location field**
+4. **Work Description field**
+5. **Green "CLOCK IN" button**
+
+### **After you click the "CLOCK IN" button, you will see:**
+
+1. **Green status box** with "🟢 CLOCKED IN" and elapsed time
+2. **BIG RED BOX** containing:
+   - Text: "⬇️ CLICK HERE TO END YOUR SHIFT ⬇️"
+   - **HUGE RED "CLOCK OUT" BUTTON** (80px tall, 2xl text)
+3. **Lunch Break section** (optional)
+4. **Location & Work Description fields**
+
+### **Why you don't see the CLOCK OUT button now:**
+
+The CLOCK OUT button **ONLY appears when you're actively clocked in**. Right now you're in the "Not Clocked In" state, so you see the CLOCK IN button instead.
+
+### **To see the CLOCK OUT button:**
+
+**Step 1:** Fill in Location (optional) and Work Description (optional)  
+**Step 2:** Click the green "CLOCK IN" button at the bottom  
+**Step 3:** The page will refresh and you'll see the red CLOCK OUT button
+
+The interface automatically switches between two states:
+- **State 1 (Not clocked in)**: Shows CLOCK IN button
+- **State 2 (Clocked in)**: Shows CLOCK OUT button
+
+This is working as designed - you can only clock out if you're first clocked in! Try clicking "CLOCK IN" and you'll immediately see the red CLOCK OUT button appear.

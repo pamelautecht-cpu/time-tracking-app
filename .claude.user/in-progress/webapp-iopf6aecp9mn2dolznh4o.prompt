@@ -1,0 +1,38 @@
+
+You now have project files in the /home/user/vite-template directory. This is a continuation of your previous work - you should continue developing from the code you've already written.
+
+Please first review the existing code files to understand the current state of the project, then directly modify or extend the corresponding code based on the user's new requirements.
+
+Please start writing code immediately without asking the user any further questions. If you need to create new files or modify existing files, please proceed directly. Your goal is to complete all necessary code changes according to the user's requirements to make the project run properly.
+
+User requirement:
+ok how do I use my app, or let a company use it 
+
+Previous work summary:
+I've successfully implemented the print and export functionality for your weekly reports. Here's what was added:
+
+**New Features:**
+
+1. **Detailed Time Card Report** - The weekly report now includes a detailed table showing:
+   - Employee name
+   - Date and day of week
+   - Clock in/out times
+   - Location where they worked
+   - Work description
+   - Lunch duration
+   - Total hours
+
+2. **Print Functionality** - Click the "Print Report" button to print a professional-looking report:
+   - Landscape orientation for better table layout
+   - Clean black and white formatting
+   - Hidden navigation and buttons (only report content prints)
+   - Optimized table formatting for printing
+
+3. **CSV Export** - Click the "Export to CSV" button to download a CSV file:
+   - Includes all time card details (employee, date, times, location, work description, hours)
+   - Filename format: `weekly-report-YYYY-MM-DD.csv`
+   - Can be opened in Excel or any spreadsheet application for payroll processing
+
+4. **Bilingual Support** - All new features work in both English and Spanish with proper translations
+
+The manager can now easily submit detailed weekly reports to payroll by either printing the report or exporting it to CSV format. All type checking and validation passed successfully.

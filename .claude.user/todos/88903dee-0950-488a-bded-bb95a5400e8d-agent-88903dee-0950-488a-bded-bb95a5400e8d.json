@@ -1,0 +1,22 @@
+[
+  {
+    "content": "Check current deployment status",
+    "status": "completed",
+    "activeForm": "Checking current deployment status"
+  },
+  {
+    "content": "Build production app",
+    "status": "completed",
+    "activeForm": "Building production app"
+  },
+  {
+    "content": "Create deployment guides",
+    "status": "completed",
+    "activeForm": "Creating deployment guides"
+  },
+  {
+    "content": "Provide deployment options",
+    "status": "in_progress",
+    "activeForm": "Providing deployment options"
+  }
+]

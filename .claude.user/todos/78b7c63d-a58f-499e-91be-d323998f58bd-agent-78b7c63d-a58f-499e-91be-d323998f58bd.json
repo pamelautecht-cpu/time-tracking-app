@@ -1,0 +1,17 @@
+[
+  {
+    "content": "Guide user through Vercel web deployment",
+    "status": "in_progress",
+    "activeForm": "Guiding user through Vercel web deployment"
+  },
+  {
+    "content": "Get deployment URL",
+    "status": "pending",
+    "activeForm": "Getting deployment URL"
+  },
+  {
+    "content": "Verify app works on phone",
+    "status": "pending",
+    "activeForm": "Verifying app works on phone"
+  }
+]

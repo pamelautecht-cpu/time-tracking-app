@@ -1,0 +1,27 @@
+
+You now have project files in the /home/user/vite-template directory. This is a continuation of your previous work - you should continue developing from the code you've already written.
+
+Please first review the existing code files to understand the current state of the project, then directly modify or extend the corresponding code based on the user's new requirements.
+
+Please start writing code immediately without asking the user any further questions. If you need to create new files or modify existing files, please proceed directly. Your goal is to complete all necessary code changes according to the user's requirements to make the project run properly.
+
+User requirement:
+I do not see clock out. How do I clock out
+
+Previous work summary:
+Excellent! All validation passed. I've fixed the Clock Out button visibility issue.
+
+## ✅ Clock Out Button Now Always Visible
+
+**Changes made:**
+
+1. **Clock Out button is now ALWAYS visible** when you're clocked in - whether you're on lunch or not
+2. **Location and Work Description fields** are now always visible but get **disabled** (grayed out) when on lunch
+3. **Changed button layout** from a 2-column grid to a stacked vertical layout for clarity
+
+**New flow when clocked in:**
+
+1. **Not on lunch**: You see "Start Lunch" button, then "Clock Out" button below it
+2. **On lunch**: You see "End Lunch" button, then "Clock Out" button below it
+
+This makes it much clearer - the Clock Out button is always available at the bottom, so you can clock out at any time (even if you're currently on lunch break). The lunch buttons are optional steps in between.

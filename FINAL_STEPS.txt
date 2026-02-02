@@ -1,0 +1,77 @@
+================================================================================
+                      📱 3 STEPS TO GET APP ON YOUR PHONE
+================================================================================
+
+Your time-tracking app is ready! Here's what to do:
+
+================================================================================
+STEP 1: PUSH CODE TO GITHUB (1 minute)
+================================================================================
+
+Run this command in your terminal:
+
+    git push -u origin main
+
+When asked:
+- Username: pamelautecht-cpu
+- Password: Your GitHub Personal Access Token
+
+Get token from: https://github.com/settings/tokens
+(Select "repo" scope when creating)
+
+================================================================================
+STEP 2: DEPLOY ON VERCEL (2 minutes)
+================================================================================
+
+1. Go to: https://vercel.com
+
+2. Click: "Add New..." → "Project"
+
+3. Find: "time-tracking-app"
+
+4. Click: "Import"
+
+5. Settings:
+   - Framework: Vite
+   - Build Command: npm run build
+   - Output Directory: dist
+
+6. Click: "Deploy"
+
+7. WAIT for build to complete (1-2 minutes)
+
+================================================================================
+STEP 3: OPEN ON YOUR PHONE
+================================================================================
+
+1. Vercel will give you a URL like:
+   https://time-tracking-app-abc123.vercel.app
+
+2. Copy that URL
+
+3. Open it on your phone's browser
+
+4. You should see:
+   ┌─────────────────────────────┐
+   │  🌐 EN | ES                 │
+   │                              │
+   │  Employee Time Tracking      │
+   │                              │
+   │  [Login as Manager]          │
+   │  [Login as Employee]         │
+   └─────────────────────────────┘
+
+5. SUCCESS! 🎉
+
+================================================================================
+                      THAT'S IT!
+================================================================================
+
+3 simple steps:
+1. git push -u origin main
+2. Import to Vercel and deploy
+3. Open URL on phone
+
+Your employee time-tracking app will be live!
+
+================================================================================

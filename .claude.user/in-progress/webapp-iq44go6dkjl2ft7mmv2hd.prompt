@@ -1,0 +1,83 @@
+
+You now have project files in the /home/user/vite-template directory. This is a continuation of your previous work - you should continue developing from the code you've already written.
+
+Please first review the existing code files to understand the current state of the project, then directly modify or extend the corresponding code based on the user's new requirements.
+
+Please start writing code immediately without asking the user any further questions. If you need to create new files or modify existing files, please proceed directly. Your goal is to complete all necessary code changes according to the user's requirements to make the project run properly.
+
+User requirement:
+It said I need a new link
+
+Previous work summary:
+Excellent! All checks pass. Let me create a summary of what I've implemented:
+
+## ✅ Fixed: Added Phone Number Support for Employee Links
+
+### The Problem You Reported:
+- Email-based lookup wasn't working reliably
+- Employees couldn't clock in when clicking the email link
+- Needed a more reliable identifier
+
+### The Solution - Triple Fallback System:
+
+I've added **phone number** as an additional fallback identifier, giving you **three ways** to identify employees:
+
+1. **Employee ID** (fastest, works if localStorage is intact)
+2. **Phone Number** (NEW - very reliable, people rarely change phone numbers)
+3. **Email Address** (fallback, but can change)
+
+### What Changed:
+
+**1. Employee Links Now Include Phone Number:**
+```
+Before: ?employee={id}&email={email}
+Now:    ?employee={id}&phone={phone}&email={email}
+```
+
+**2. Auto-Login Priority Order:**
+1. Try to match by ID first
+2. If ID doesn't work, try phone number
+3. If phone doesn't work, try email
+4. If nothing works, show "Link Expired" message
+
+**3. Updated Functions:**
+- `copyEmployeeLink()` - Now includes phone in copied link
+- `emailEmployeeLink()` - Now includes phone in emailed link
+- Auto-login logic - Now checks phone parameter
+
+### How to Use:
+
+**For Managers:**
+1. Make sure employees have phone numbers entered in their profile
+2. Edit employee → Add their phone number
+3. Click "Email Link to Employee" or "Copy Employee Link"
+4. New link will include: `?employee=...&phone=...&email=...`
+
+**For Employees:**
+1. Click the link from email
+2. App will try to find you by:
+   - ID (if localStorage is intact)
+   - **Phone number** (NEW - most reliable!)
+   - Email address
+3. Auto-login to time tracking screen
+
+### Console Debugging (F12):
+
+When you click an employee link, you'll now see:
+```
+=== AUTO-LOGIN ATTEMPT ===
+Employee ID from URL: abc-123...
+Employee Phone from URL: +1-555-123-4567
+Employee Email from URL: user@example.com
+Available users: [shows phone numbers too]
+Attempted phone-based lookup for: +1-555-123-4567 Found: true
+✓ Auto-login successful for: John Smith
+```
+
+### Why Phone is Better Than Email:
+- ✅ People rarely change phone numbers
+- ✅ Phone numbers are unique
+- ✅ More stable than email addresses
+- ✅ Works even if email is updated in the system
+
+All TypeScript checks pass! The employee link system is now much more reliable with phone number support.

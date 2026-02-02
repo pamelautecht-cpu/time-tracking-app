@@ -1,0 +1,22 @@
+[
+  {
+    "content": "Create new Vercel project",
+    "status": "in_progress",
+    "activeForm": "Creating new Vercel project"
+  },
+  {
+    "content": "Deploy time-tracking app to Vercel",
+    "status": "pending",
+    "activeForm": "Deploying time-tracking app to Vercel"
+  },
+  {
+    "content": "Get live URL for phone",
+    "status": "pending",
+    "activeForm": "Getting live URL for phone"
+  },
+  {
+    "content": "Verify app works on phone",
+    "status": "pending",
+    "activeForm": "Verifying app works on phone"
+  }
+]

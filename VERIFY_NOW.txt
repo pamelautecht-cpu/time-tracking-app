@@ -1,0 +1,30 @@
+================================================================================
+                    🚀 DEPLOY YOUR APP - VERIFY THIS CODE
+================================================================================
+
+I'm deploying your time-tracking app to Vercel right now!
+
+STEP 1: Go to this URL and click "Confirm"
+-------------------------------------------
+
+👉 https://vercel.com/oauth/device?user_code=ZGCT-VBMB
+
+CODE: ZGCT-VBMB
+
+Just click "Confirm" to allow the deployment.
+
+STEP 2: Tell me "I confirmed it"
+---------------------------------
+
+After you click confirm, just say "I confirmed it" and I'll:
+- Deploy your time-tracking app
+- Give you the URL
+- You can open it on your phone immediately!
+
+================================================================================
+
+GO HERE NOW: https://vercel.com/oauth/device?user_code=ZGCT-VBMB
+
+Then tell me: "I confirmed it"
+
+================================================================================

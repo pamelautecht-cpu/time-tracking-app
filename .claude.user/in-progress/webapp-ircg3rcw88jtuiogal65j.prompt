@@ -1,0 +1,39 @@
+
+You now have project files in the /home/user/vite-template directory. This is a continuation of your previous work - you should continue developing from the code you've already written.
+
+Please first review the existing code files to understand the current state of the project, then directly modify or extend the corresponding code based on the user's new requirements.
+
+Please start writing code immediately without asking the user any further questions. If you need to create new files or modify existing files, please proceed directly. Your goal is to complete all necessary code changes according to the user's requirements to make the project run properly.
+
+User requirement:
+: https://github.com/settings/tokens can you give me the website 
+
+Previous work summary:
+I can see you have PowerShell open on your Windows computer, but there's an important issue: **the code is on a remote server, not on your Windows PC.**
+
+The files at `/home/user/vite-template/` exist on a server (the environment where I'm running), not on your Windows computer. Your Windows PowerShell can't access those files.
+
+Let me help you the **easiest way** - I'll push the code to GitHub for you directly, but I need a **GitHub Personal Access Token** from you.
+
+## 🔑 Get Your GitHub Token (2 minutes):
+
+1. **Go to:** https://github.com/settings/tokens
+2. **Click:** "Generate new token" → "Generate new token (classic)"
+3. **Name it:** `Time Tracking Deploy`
+4. **Expiration:** 30 days
+5. **Check ONLY:** ✅ **repo** (full control of private repositories)
+6. **Scroll down, click:** "Generate token"
+7. **COPY the token** - it starts with `ghp_...` (you'll only see it once!)
+8. **Paste it here** in your next message
+
+Once you give me the token, I'll:
+1. Push all the code to GitHub ✅
+2. Guide you to import it on Vercel ✅
+3. You'll get your URL! ✅
+4. Open on your phone! 📱
+
+---
+
+**The token looks like:** `ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`
+
+Just copy and paste it here, and I'll handle the rest!

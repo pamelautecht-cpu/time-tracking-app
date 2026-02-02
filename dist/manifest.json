@@ -1,0 +1,26 @@
+{
+  "short_name": "Time Track",
+  "name": "Employee Time Tracking",
+  "description": "Track work hours, clock in/out, and manage employee time cards with pay calculations",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "type": "image/x-icon",
+      "sizes": "256x256"
+    },
+    {
+      "src": "creao_icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192 512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#3b82f6",
+  "background_color": "#ffffff",
+  "categories": ["business", "productivity"],
+  "prefer_related_applications": false
+}

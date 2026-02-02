@@ -1,0 +1,71 @@
+================================================================================
+                     🚀 USE APP ON YOUR PHONE - 2 STEPS
+================================================================================
+
+## WHY IT DOESN'T WORK NOW:
+
+"localhost" ONLY works on your computer. Your phone can't see it.
+That's why you get 404 errors.
+
+You need to use your computer's IP address instead.
+
+================================================================================
+
+## ⚡ DO THIS NOW (2 MINUTES):
+
+STEP 1: On your computer, run:
+-------------------------------
+npm run dev
+
+(Leave this running! Don't close it!)
+
+
+STEP 2: On your phone, open browser and go to:
+-----------------------------------------------
+http://169.254.0.21:3000
+
+(Make sure your phone is on the SAME WiFi as your computer!)
+
+
+THAT'S IT! No more 404! ✅
+
+================================================================================
+
+## 📝 WHAT JUST HAPPENED:
+
+BEFORE: http://localhost:3000  (only works on computer)
+NOW:    http://169.254.0.21:3000  (works on phone too!)
+
+Your computer's IP = 169.254.0.21
+Your phone can see this IP when on same WiFi!
+
+================================================================================
+
+## ⚠️ IMPORTANT:
+
+This ONLY works when:
+- Your computer is running "npm run dev"
+- Your phone is on SAME WiFi network
+- Your computer is turned on
+
+If you turn off your computer, the app stops working.
+
+================================================================================
+
+## 🌐 WANT IT TO WORK ALL THE TIME?
+
+Deploy to Vercel (5 minutes):
+- Works even when computer is off
+- Works on any WiFi or cellular data
+- Get permanent URL like: https://time-tracking.vercel.app
+
+See: DEPLOYMENT_CHECKLIST.txt for instructions
+
+================================================================================
+
+READY? 
+
+1. On computer: npm run dev
+2. On phone: http://169.254.0.21:3000
+
+================================================================================

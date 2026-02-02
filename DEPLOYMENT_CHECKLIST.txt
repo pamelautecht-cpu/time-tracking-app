@@ -1,0 +1,96 @@
+================================================================================
+                    DEPLOYMENT CHECKLIST - CHECK OFF AS YOU GO
+================================================================================
+
+PART 1: SIGN UP FOR VERCEL
+---------------------------
+[ ] Go to https://vercel.com on your desktop
+[ ] Click "Sign Up" button
+[ ] Choose sign up method (GitHub, GitLab, or Email)
+[ ] Complete account creation
+[ ] You're now on Vercel Dashboard
+
+PART 2: DEPLOY YOUR APP
+------------------------
+[ ] Click "Add New..." → "Project" in Vercel Dashboard
+[ ] See the import page
+[ ] Find your vite-template folder on your computer
+[ ] Drag folder onto Vercel (or click Browse and select it)
+[ ] Wait for upload to complete
+[ ] Configure settings:
+    [ ] Project Name: time-tracking (or your choice)
+    [ ] Framework: Vite (should auto-detect)
+    [ ] Build Command: npm run build (should auto-fill)
+    [ ] Output Directory: dist (should auto-fill)
+[ ] Click "Deploy" button
+[ ] Wait 1-2 minutes for deployment
+[ ] See success screen with your URL!
+[ ] Copy your URL (like: https://time-tracking-xyz.vercel.app)
+
+PART 3: TEST ON DESKTOP
+------------------------
+[ ] Click "Visit" button or paste your URL in browser
+[ ] App loads successfully (no 404!)
+[ ] Select "Manager" role
+[ ] Add yourself as an employee with:
+    [ ] Your name
+    [ ] Your phone number
+    [ ] Your email
+    [ ] Pay rate (optional)
+[ ] Click "Add Employee"
+[ ] Switch to "Employee" view (select your name)
+[ ] Click "Clock In" - verify it works
+[ ] Click "Clock Out" - verify it works
+[ ] Desktop app is working! ✓
+
+PART 4: GET APP ON YOUR PHONE
+------------------------------
+[ ] On your phone, open web browser
+[ ] Type your Vercel URL in address bar
+[ ] App loads on phone (no 404 error!)
+[ ] Bookmark or add to home screen:
+    
+    FOR IPHONE:
+    [ ] Open in Safari browser
+    [ ] Tap Share button (square with arrow)
+    [ ] Scroll down, tap "Add to Home Screen"
+    [ ] Tap "Add"
+    [ ] See app icon on home screen
+    
+    FOR ANDROID:
+    [ ] Open in Chrome browser
+    [ ] Tap menu (three dots)
+    [ ] Tap "Add to Home screen"
+    [ ] Tap "Add"
+    [ ] See app icon on home screen
+
+PART 5: GET YOUR EMPLOYEE LINK
+-------------------------------
+[ ] On desktop, open your Vercel app
+[ ] Select Manager view
+[ ] Make sure your employee is saved (from Part 3)
+[ ] Switch to Employee view (select your name)
+[ ] Click "Copy My Link" button at top
+[ ] Link is copied to clipboard
+[ ] Send link to your phone:
+    [ ] Text yourself, OR
+    [ ] Email yourself, OR
+    [ ] Use synced notes app
+[ ] On phone, click the link
+[ ] Auto-logs you in directly to your time clock!
+[ ] You can now clock in/out from your phone! ✓
+
+================================================================================
+                              YOU'RE DONE! 🎉
+================================================================================
+
+Your time tracking app is now:
+✓ Live on the internet
+✓ Works on any device
+✓ No more 404 errors
+✓ Installed as phone app
+✓ Has working employee links
+
+Share your Vercel URL with other employees and they can use it too!
+
+================================================================================

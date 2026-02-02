@@ -1,0 +1,12 @@
+Restoring Employee Time Tracking App...
+
+This app includes:
+- Employee clock in/out
+- Manager dashboard
+- Pay rate calculations
+- Weekly reports
+- Print functionality
+- English/Spanish bilingual support
+- Employee links for auto-login
+- Phone number support
+- Sick day tracking

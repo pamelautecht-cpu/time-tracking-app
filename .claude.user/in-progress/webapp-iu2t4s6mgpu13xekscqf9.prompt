@@ -1,0 +1,112 @@
+
+You now have project files in the /home/user/vite-template directory. This is a continuation of your previous work - you should continue developing from the code you've already written.
+
+Please first review the existing code files to understand the current state of the project, then directly modify or extend the corresponding code based on the user's new requirements.
+
+Please start writing code immediately without asking the user any further questions. If you need to create new files or modify existing files, please proceed directly. Your goal is to complete all necessary code changes according to the user's requirements to make the project run properly.
+
+User requirement:
+ok perfect. Now what do I do with my time card system 
+
+Previous work summary:
+Perfect! I've successfully implemented lunch break tracking for the employee time tracking system. Here's a comprehensive summary:
+
+## ✅ Lunch Break Feature Implementation Complete
+
+### **New Features Added:**
+
+#### **1. Database Schema Updates**
+- **lunch_start_timestamp** (string, optional) - Records when lunch break starts
+- **lunch_end_timestamp** (string, optional) - Records when lunch break ends  
+- **lunch_duration_minutes** (number, optional) - Total lunch time in minutes
+
+#### **2. Employee View - Lunch Break Controls**
+
+**When Clocked In (Not on Lunch):**
+- Two-button layout: "Start Lunch Break" (outline) and "Clock Out" (destructive red)
+- Coffee icon on lunch button
+- Shows accumulated lunch time if any breaks were taken earlier
+- Location and work description fields remain visible and editable
+
+**When On Lunch Break:**
+- Orange banner replaces green "Currently Clocked In" banner
+- Coffee icon prominently displayed
+- Shows "On Lunch Break" status with start timestamp
+- Single full-width button: "End Lunch Break"
+- Location and work description fields hidden during lunch
+- Real-time timer pauses (doesn't count lunch time)
+
+**After Ending Lunch:**
+- Returns to normal clocked-in state
+- Lunch duration is accumulated (supports multiple lunch breaks per shift)
+- Lunch time is displayed in the green status banner
+- Employee can start another lunch break if needed
+
+#### **3. Automatic Time Calculations**
+
+**Total Hours Worked:**
+- Calculated as: (Clock Out - Clock In) - Lunch Duration
+- Lunch time automatically deducted from total hours
+- Supports multiple lunch breaks (durations are summed)
+- Example: 8 hour shift with 45 min lunch = 7.25 hours paid
+
+**Lunch Duration Display:**
+- Shown in minutes (e.g., "45 min")
+- Visible in employee history and manager dashboard
+- Appears in active shift status when not on lunch
+
+#### **4. Time Card History Updates**
+
+**New Column Added:**
+- "Lunch" column showing lunch duration in minutes
+- Displays "—" if no lunch was taken
+- Rounded to nearest minute for clean display
+
+**Status Badges:**
+- Orange "On Lunch Break" badge when actively on lunch
+- Green "Active" badge when working
+- Gray "Completed" badge when shift is done
+
+#### **5. Manager Dashboard Enhancements**
+
+**Lunch Break Visibility:**
+- New "Lunch" column in all employee time cards table
+- Orange "On Lunch Break" status badge for active lunch breaks
+- Lunch duration displayed for completed shifts
+
+**Edit Dialog Updates:**
+- Two new datetime fields: "Lunch Start" and "Lunch End"
+- Managers can manually add/edit lunch break times
+- Automatic recalculation of lunch duration and total hours
+- Total hours automatically adjust when lunch times are changed
+
+#### **6. Bilingual Support (English/Spanish)**
+
+**New Translations:**
+- "Start Lunch Break" / "Iniciar Almuerzo"
+- "End Lunch Break" / "Terminar Almuerzo"  
+- "On Lunch Break" / "En Almuerzo"
+- "Lunch Break" / "Almuerzo"
+- "Lunch Start" / "Inicio Almuerzo"
+- "Lunch End" / "Fin Almuerzo"
+
+### **How It Works:**
+
+1. **Employee clocks in** → Normal working state
+2. **Employee clicks "Start Lunch Break"** → Timer pauses, orange banner appears, location/description fields hide
+3. **Employee clicks "End Lunch Break"** → Returns to working state, lunch duration is saved
+4. **Employee can take multiple lunch breaks** → Durations accumulate
+5. **Employee clocks out** → Total hours = (end - start) - all lunch time
+6. **Manager can view and edit** → All lunch data visible and editable
+
+### **Technical Details:**
+
+- Lunch breaks properly tracked with start/end timestamps
+- Multiple lunch breaks per shift supported (durations add up)
+- Real-time UI updates when starting/ending lunch
+- Automatic calculation ensures accurate payroll data
+- All lunch data persisted in database
+- Type-safe TypeScript implementation
+- All validations passing ✅
+
+The lunch break feature is now fully integrated into the time tracking system with complete bilingual support!

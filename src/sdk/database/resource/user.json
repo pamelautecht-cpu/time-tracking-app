@@ -1,0 +1,161 @@
+{
+  "id": "102019c00c08af97812a9d0d12b12a3190a",
+  "version": "102019c1cfd419d792289435971f2cb54b3",
+  "schema": {
+    "name": "user",
+    "description": "Represents a user in the system, either an Employee or a Manager.",
+    "fields": [
+      {
+        "name": "id",
+        "description": "Unique identifier for the user (UUID).",
+        "type": 1,
+        "compliance": {
+          "confidentiality": 1,
+          "reason": "Public identifier"
+        }
+      },
+      {
+        "name": "data_creator",
+        "description": "id of the user who creates the record",
+        "type": 1,
+        "compliance": {
+          "confidentiality": 2,
+          "reason": "Internal audit"
+        }
+      },
+      {
+        "name": "data_updater",
+        "description": "id of the user who updates the record",
+        "type": 1,
+        "compliance": {
+          "confidentiality": 2,
+          "reason": "Internal audit"
+        }
+      },
+      {
+        "name": "create_time",
+        "description": "create time in timestamp unix",
+        "type": 1,
+        "compliance": {
+          "confidentiality": 1,
+          "reason": "System timestamp"
+        },
+        "format": "timestamp"
+      },
+      {
+        "name": "update_time",
+        "description": "update time in timestamp unix",
+        "type": 1,
+        "compliance": {
+          "confidentiality": 1,
+          "reason": "System timestamp"
+        },
+        "format": "timestamp"
+      },
+      {
+        "name": "name",
+        "description": "Full name of the user.",
+        "type": 1,
+        "compliance": {
+          "confidentiality": 3,
+          "reason": "Personally Identifiable Information (PII)"
+        }
+      },
+      {
+        "name": "email",
+        "description": "Email address of the user.",
+        "type": 1,
+        "compliance": {
+          "confidentiality": 3,
+          "reason": "Personally Identifiable Information (PII)"
+        },
+        "format": "email"
+      },
+      {
+        "name": "phone",
+        "description": "Employee phone number field.",
+        "type": 1,
+        "compliance": {
+          "confidentiality": 3,
+          "reason": "Personally Identifiable Information (PII)"
+        },
+        "nullable": true
+      },
+      {
+        "name": "role",
+        "description": "Role of the user in the system.",
+        "type": 100,
+        "compliance": {
+          "confidentiality": 2,
+          "reason": "Internal authorization logic"
+        },
+        "enumeration": [
+          {
+            "value": "Unspecified"
+          },
+          {
+            "number": 1,
+            "value": "Employee"
+          },
+          {
+            "number": 2,
+            "value": "Manager"
+          }
+        ]
+      },
+      {
+        "name": "hourly_rate",
+        "description": "Hourly pay rate for the user.",
+        "type": 2,
+        "compliance": {
+          "confidentiality": 3,
+          "reason": "Compensation data"
+        },
+        "nullable": true,
+        "numeric": "float"
+      }
+    ],
+    "indexes": [
+      {
+        "fields": [
+          "id"
+        ],
+        "unique": true,
+        "primary": true,
+        "order": false
+      },
+      {
+        "fields": [
+          "email"
+        ],
+        "unique": true,
+        "order": false
+      },
+      {
+        "fields": [
+          "data_creator"
+        ],
+        "order": false
+      },
+      {
+        "fields": [
+          "data_updater"
+        ],
+        "order": false
+      }
+    ]
+  },
+  "task": {
+    "id": "698040b956ef0bb86b149560",
+    "root": "6979037d768a7cf710e2a1b8",
+    "project": "6979037d768a7cf710e2a1b7",
+    "user": "38c1d360-e051-70bf-b429-cc4c6d02d858"
+  },
+  "namespace": {
+    "id": "01987547fc6c72ecb453bd2736bd4ea0",
+    "tenant": 2,
+    "name": "global-1",
+    "default": true
+  },
+  "revision": 1
+}

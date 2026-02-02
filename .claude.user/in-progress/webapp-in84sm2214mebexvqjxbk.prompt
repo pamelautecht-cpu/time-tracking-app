@@ -1,0 +1,29 @@
+
+You now have project files in the /home/user/vite-template directory. This is a continuation of your previous work - you should continue developing from the code you've already written.
+
+Please first review the existing code files to understand the current state of the project, then directly modify or extend the corresponding code based on the user's new requirements.
+
+Please start writing code immediately without asking the user any further questions. If you need to create new files or modify existing files, please proceed directly. Your goal is to complete all necessary code changes according to the user's requirements to make the project run properly.
+
+User requirement:
+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
+
+Previous work summary:
+Yes! Here's the website link:
+
+## 🔑 **GitHub Token Page:**
+**https://github.com/settings/tokens**
+
+Click that link, and follow these steps:
+
+1. **Click:** "Generate new token" → "Generate new token (classic)"
+2. **Name it:** `Time Tracking Deploy`
+3. **Expiration:** 30 days
+4. **Check ONLY:** ✅ **repo** (full control of private repositories)
+5. **Scroll down, click:** "Generate token"
+6. **COPY the token** - starts with `ghp_...`
+7. **Paste it here**
+
+The token will look like: `ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`
+
+Once you give me that token, I'll push everything to GitHub and get your app deployed! 🚀

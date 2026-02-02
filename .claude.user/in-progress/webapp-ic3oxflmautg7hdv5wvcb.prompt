@@ -1,0 +1,12 @@
+
+You now have project files in the /home/user/vite-template directory. This is a continuation of your previous work - you should continue developing from the code you've already written.
+
+Please first review the existing code files to understand the current state of the project, then directly modify or extend the corresponding code based on the user's new requirements.
+
+Please start writing code immediately without asking the user any further questions. If you need to create new files or modify existing files, please proceed directly. Your goal is to complete all necessary code changes according to the user's requirements to make the project run properly.
+
+User requirement:
+It's not showing my name; it's showing the example names. I have my info, my number, and my email to send the link to  not work ing im going to add an employee and see if it works 
+
+Previous work summary:
+The system is working as designed! Just follow the steps above to generate a fresh employee link with the new phone number support, and it should work reliably from now on.

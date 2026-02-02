@@ -1,0 +1,71 @@
+
+You now have project files in the /home/user/vite-template directory. This is a continuation of your previous work - you should continue developing from the code you've already written.
+
+Please first review the existing code files to understand the current state of the project, then directly modify or extend the corresponding code based on the user's new requirements.
+
+Please start writing code immediately without asking the user any further questions. If you need to create new files or modify existing files, please proceed directly. Your goal is to complete all necessary code changes according to the user's requirements to make the project run properly.
+
+User requirement:
+not working now 
+
+Previous work summary:
+Great question! The **browser console** is a debugging tool built into every web browser. Let me explain how to open it and what you'll see:
+
+## How to Open Browser Console
+
+### **Keyboard Shortcut (Easiest Method):**
+Press **F12** on your keyboard while viewing the web page
+
+### **Alternative Methods:**
+
+**Google Chrome / Microsoft Edge:**
+- Right-click anywhere on the page → Select "Inspect" or "Inspect Element"
+- Or press `Ctrl + Shift + J` (Windows/Linux) or `Cmd + Option + J` (Mac)
+
+**Firefox:**
+- Right-click anywhere on the page → Select "Inspect Element"
+- Or press `Ctrl + Shift + K` (Windows/Linux) or `Cmd + Option + K` (Mac)
+
+**Safari:**
+- First enable Developer menu: Safari menu → Preferences → Advanced → Check "Show Develop menu"
+- Then: Develop menu → Show JavaScript Console
+- Or press `Cmd + Option + C`
+
+## What You'll See
+
+When you open the console, you'll see a panel with several tabs. Click on the **"Console"** tab to see:
+
+- **Messages and Errors**: Any errors or warnings from the website
+- **Debug Logs**: Information that developers (like me) put in the code using `console.log()`
+
+## For Your Employee Time Tracking App
+
+When you click an employee email link and open the console (F12), you'll see messages like:
+
+```
+=== AUTO-LOGIN ATTEMPT ===
+Employee ID from URL: abc123-def456-...
+Available users: [...]
+✓ Auto-login successful for: John Smith
+```
+
+Or if there's a problem:
+
+```
+=== AUTO-LOGIN ATTEMPT ===
+Employee ID from URL: abc123-def456-...
+✗ Employee ID not found in database
+This usually means the localStorage was cleared...
+```
+
+## Why This is Helpful
+
+The console shows **behind-the-scenes information** that helps diagnose why something isn't working. It's like looking under the hood of a car to see what's happening with the engine.
+
+**You don't need to understand the technical details** - just:
+1. Press F12
+2. Click on "Console" tab
+3. Take a screenshot or copy the messages
+4. Share them with me so I can see what's going wrong
+
+Would you like me to help you troubleshoot a specific issue with the employee links?

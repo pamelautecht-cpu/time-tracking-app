@@ -1,0 +1,163 @@
+================================================================================
+                    📍 YOU'RE AT STEP 9-10 - HERE'S WHAT TO DO!
+================================================================================
+
+You need to find your vite-template folder and upload it to Vercel.
+
+================================================================================
+STEP 9: FIND YOUR FOLDER
+================================================================================
+
+Your vite-template folder is at:
+
+    /home/user/vite-template
+
+How to find it:
+
+WINDOWS:
+--------
+1. Press Windows key + E (opens File Explorer)
+2. In the address bar at top, type or paste:
+   C:\Users\YourName\vite-template
+   (Replace "YourName" with your actual username)
+3. Press Enter
+4. You should see your folder!
+
+MAC:
+----
+1. Press Cmd + Space (opens Spotlight)
+2. Type: vite-template
+3. It should show up in results
+4. Click it to open in Finder
+
+LINUX:
+------
+1. Open File Manager
+2. Navigate to: /home/user/vite-template
+3. Or use terminal and type: nautilus /home/user/vite-template
+
+================================================================================
+STEP 10: UPLOAD TO VERCEL
+================================================================================
+
+Now you have TWO options:
+
+OPTION A: Drag and Drop (Easiest!)
+-----------------------------------
+
+1. Keep your File Explorer/Finder window OPEN (showing vite-template folder)
+
+2. Go back to Vercel in your browser
+
+3. On the Vercel page, you should see something like:
+   ┌────────────────────────────────┐
+   │  Import Git Repository         │
+   │                                │
+   │  Or drag and drop here         │  ⬅️ LOOK FOR THIS!
+   │  ┌────────────────────────┐   │
+   │  │  Drop your project     │   │
+   │  │  folder here           │   │
+   │  └────────────────────────┘   │
+   └────────────────────────────────┘
+
+4. DRAG the entire vite-template folder from your File Explorer
+
+5. DROP it onto the Vercel page (in the drop area)
+
+OPTION B: Browse and Select
+----------------------------
+
+1. Look for a "Browse" button on the Vercel page
+
+2. Click it
+
+3. Navigate to your vite-template folder
+
+4. Select the folder
+
+5. Click "Open" or "Select"
+
+================================================================================
+CAN'T SEE THE UPLOAD AREA?
+================================================================================
+
+If you don't see a drag-and-drop area or Browse button:
+
+1. Make sure you clicked "Add New..." → "Project"
+
+2. Scroll down on the page - the upload area might be below
+
+3. Look for text like:
+   - "Import Project"
+   - "Deploy from..."
+   - "Upload your project"
+
+4. If you see "Import Git Repository" options:
+   - Scroll DOWN past those
+   - Look for "Or, deploy without Git"
+   - That's where the upload option is!
+
+================================================================================
+WHAT HAPPENS AFTER UPLOAD?
+================================================================================
+
+After you drag/upload the folder:
+
+1. Vercel shows upload progress (30 seconds)
+
+2. You'll see a configuration screen:
+   ┌──────────────────────────────────────┐
+   │  Project Name: [time-tracking]       │
+   │  Framework: [Vite] ✓                 │
+   │  Build Command: [npm run build] ✓    │
+   │  Output Directory: [dist] ✓          │
+   │                                      │
+   │  [Deploy]  ⬅️ CLICK THIS!            │
+   └──────────────────────────────────────┘
+
+3. Everything should be pre-filled correctly
+
+4. Just click "Deploy"!
+
+================================================================================
+NEXT STEPS (STEP 13-15):
+================================================================================
+
+After clicking "Deploy":
+
+Step 13: ✅ Deploy button clicked
+Step 14: Wait 1-2 minutes (you'll see progress)
+Step 15: SUCCESS! Your URL appears:
+         https://time-tracking-xyz.vercel.app
+
+================================================================================
+STILL STUCK?
+================================================================================
+
+Tell me EXACTLY where you are:
+
+Option 1: "I can't find my vite-template folder"
+   → I'll help you locate it
+
+Option 2: "I found the folder but can't see where to upload it"
+   → I'll help you find the upload area
+
+Option 3: "I uploaded it! Now what?"
+   → I'll tell you the next steps
+
+Option 4: "I see the configuration screen"
+   → I'll tell you what to do
+
+================================================================================
+QUICK SUMMARY - YOUR CURRENT STEP:
+================================================================================
+
+✅ Step 1-8: Done (you're signed up and on Vercel)
+→ Step 9: Find vite-template folder (DO THIS NOW!)
+→ Step 10: Drag it to Vercel page
+→ Step 13: Click "Deploy"
+→ Step 15: Get your URL! 🎉
+
+You're almost there! Just find the folder and drag it over!
+
+================================================================================

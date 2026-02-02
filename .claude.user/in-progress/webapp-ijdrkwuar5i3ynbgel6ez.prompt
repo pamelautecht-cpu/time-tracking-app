@@ -1,0 +1,72 @@
+
+You now have project files in the /home/user/vite-template directory. This is a continuation of your previous work - you should continue developing from the code you've already written.
+
+Please first review the existing code files to understand the current state of the project, then directly modify or extend the corresponding code based on the user's new requirements.
+
+Please start writing code immediately without asking the user any further questions. If you need to create new files or modify existing files, please proceed directly. Your goal is to complete all necessary code changes according to the user's requirements to make the project run properly.
+
+User requirement:
+perfect can the manager print out the weekly report on the employee's time, location, and work description to submit to payroll
+
+Previous work summary:
+Excellent! I've successfully added the phone number field to the employee management system. Here's what was implemented:
+
+## ✅ **Phone Number Feature Complete!**
+
+### **Changes Made:**
+
+1. **Database Schema Updated** ✅
+   - Added `phone` field (optional string) to User model
+   - Field is nullable to allow employees without phone numbers
+
+2. **Employee Table Display** ✅
+   - Added "Phone" column to the employees table
+   - Shows phone number or "—" if not provided
+   - Positioned between Email and Role columns
+
+3. **Add Employee Dialog** ✅
+   - New phone number input field
+   - Type set to "tel" for mobile keyboard optimization
+   - Placeholder: "+1 (555) 123-4567"
+   - Optional field (not required)
+
+4. **Edit Employee Dialog** ✅
+   - Phone number field included
+   - Pre-fills with existing phone number when editing
+   - Can be updated or cleared
+
+5. **Bilingual Support** ✅
+   - English: "Phone"
+   - Spanish: "Teléfono"
+   - Both translations added to the system
+
+### **How to Use:**
+
+**Adding a New Employee with Phone:**
+1. Log in as Manager (Mike Manager)
+2. Go to "Employees" tab
+3. Click "Add Employee"
+4. Fill in:
+   - Name (required)
+   - Email (required)
+   - **Phone** (optional) - e.g., "+1 (555) 123-4567"
+   - Role (Employee/Manager)
+5. Click "Save Changes"
+
+**Editing Phone Number:**
+1. Click "Edit" on any employee
+2. Update the phone number field
+3. Click "Save Changes"
+
+**Viewing Phone Numbers:**
+- All phone numbers appear in the employees table
+- Empty phone fields show "—"
+
+### **Technical Details:**
+- Phone field is optional (nullable in database)
+- Uses HTML5 `type="tel"` for proper mobile input
+- All TypeScript type checking passes ✅
+- Full Spanish translation included ✅
+- Data properly persisted in database ✅
+
+The phone number feature is now fully integrated into your employee time tracking system!

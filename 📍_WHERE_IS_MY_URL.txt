@@ -1,0 +1,202 @@
+================================================================================
+                    📍 WHERE TO FIND YOUR VERCEL URL
+================================================================================
+
+After you click "Deploy" and wait 2 minutes, here's EXACTLY where your URL appears:
+
+================================================================================
+STEP 1: DEPLOYMENT SCREEN (While It's Building)
+================================================================================
+
+You'll see a screen with:
+┌─────────────────────────────────────────────┐
+│  Building...                                │
+│  ⏳ Installing Dependencies                 │
+│  ⏳ Building                                │
+│  ⏳ Deploying                               │
+└─────────────────────────────────────────────┘
+
+WAIT for this to finish (1-2 minutes).
+Don't close the page!
+
+================================================================================
+STEP 2: SUCCESS SCREEN (Where Your URL Appears!)
+================================================================================
+
+When deployment finishes, you'll see a BIG screen with:
+
+┌─────────────────────────────────────────────┐
+│         🎉 Congratulations! 🎊              │
+│                                             │
+│    Your project has been deployed!          │
+│                                             │
+│  👉 https://time-tracking-abc123.vercel.app │  ⬅️ YOUR URL IS HERE!
+│                                             │
+│  [ Visit ]  [ Continue to Dashboard ]      │
+│                                             │
+└─────────────────────────────────────────────┘
+
+YOUR URL will be shown in the MIDDLE of the screen!
+
+It looks like:
+https://time-tracking-abc123.vercel.app
+        ⬆️           ⬆️
+    your name    random code
+
+================================================================================
+WHERE TO FIND YOUR URL - 3 PLACES
+================================================================================
+
+PLACE 1: Success Screen (Right After Deployment)
+-------------------------------------------------
+- Big URL in the middle of the screen
+- Shows immediately after deployment finishes
+- Click "Visit" button to test it
+- OR copy the URL to use on your phone
+
+PLACE 2: Vercel Dashboard
+-------------------------------------------------
+1. Go to: https://vercel.com
+2. Log in to your account
+3. You'll see your project "time-tracking"
+4. Click on it
+5. Your URL is shown at the top:
+   
+   ┌─────────────────────────────────────────┐
+   │  time-tracking                          │
+   │  🌐 https://time-tracking-xyz.vercel.app│  ⬅️ YOUR URL
+   │                                         │
+   └─────────────────────────────────────────┘
+
+PLACE 3: Project Settings
+-------------------------------------------------
+1. In Vercel Dashboard
+2. Click your "time-tracking" project
+3. Look for "Domains" section
+4. Your URL is listed there
+
+================================================================================
+WHAT TO DO WITH YOUR URL
+================================================================================
+
+After you get your URL (like https://time-tracking-abc123.vercel.app):
+
+1. COPY IT
+   - Select the URL
+   - Ctrl+C (Windows/Linux) or Cmd+C (Mac)
+   - OR right-click → Copy
+
+2. TEST IT ON DESKTOP
+   - Open a new browser tab
+   - Paste the URL
+   - Press Enter
+   - Your app should load! ✅
+
+3. USE IT ON YOUR PHONE
+   - On your phone, open browser
+   - Type the URL (or text it to yourself)
+   - Your app loads - NO MORE 404! ✅
+
+4. INSTALL AS PHONE APP
+   - iPhone: Safari → Share → "Add to Home Screen"
+   - Android: Chrome → Menu → "Add to Home screen"
+
+5. GET YOUR EMPLOYEE LINK
+   - Open the URL
+   - Select Manager
+   - Add yourself as employee
+   - Switch to Employee view
+   - Click "Copy My Link"
+   - Send to your phone
+   - Click it → Auto-login! ✅
+
+================================================================================
+EXAMPLE - WHAT YOUR URL LOOKS LIKE
+================================================================================
+
+Your URL will look something like:
+
+https://time-tracking-xyz123.vercel.app
+
+OR
+
+https://time-tracking-abc456.vercel.app
+
+OR
+
+https://my-time-tracker.vercel.app
+
+The format is always:
+https://[your-project-name]-[random-code].vercel.app
+
+OR if you're lucky:
+https://[your-project-name].vercel.app
+
+================================================================================
+IF YOU CAN'T FIND YOUR URL
+================================================================================
+
+Option 1: Click "Visit" Button
+-------------------------------
+On the success screen, just click the big "Visit" button.
+It will open your app in a new tab.
+Copy the URL from the address bar!
+
+Option 2: Check Your Email
+-------------------------------
+Vercel might send you an email with your deployment URL.
+Check your inbox for "Deployment Ready" email.
+
+Option 3: Go to Dashboard
+-------------------------------
+1. Go to: https://vercel.com
+2. Log in
+3. Click "time-tracking" project
+4. Your URL is at the top of the page
+
+Option 4: Check Deployments Tab
+-------------------------------
+1. In Vercel Dashboard
+2. Click "time-tracking" project
+3. Click "Deployments" tab
+4. Click the most recent deployment
+5. Your URL is shown there
+
+================================================================================
+COMMON QUESTIONS
+================================================================================
+
+Q: How long should I wait?
+A: 1-2 minutes after clicking "Deploy"
+
+Q: Will I miss the URL?
+A: No! It stays on the success screen. And you can always find it in your 
+   Vercel Dashboard.
+
+Q: Can I change my URL later?
+A: Yes! You can add a custom domain in Vercel settings.
+
+Q: What if deployment fails?
+A: Check the build logs, fix errors, and click "Redeploy"
+
+Q: Is the URL permanent?
+A: Yes! Your URL works forever (as long as you don't delete the project)
+
+================================================================================
+READY?
+================================================================================
+
+After you click "Deploy":
+1. WAIT for deployment to finish (1-2 minutes)
+2. LOOK for the big success screen with confetti 🎉
+3. YOUR URL is shown in the MIDDLE of the screen
+4. COPY the URL
+5. TEST it on your desktop first
+6. Then USE it on your phone
+
+Your URL will look like:
+https://time-tracking-abc123.vercel.app
+
+That's the URL you'll use on your phone - NO MORE 404! ✅
+
+================================================================================

@@ -1,0 +1,22 @@
+[
+  {
+    "content": "Initialize git repository",
+    "status": "completed",
+    "activeForm": "Initializing git repository"
+  },
+  {
+    "content": "Commit all files to git",
+    "status": "completed",
+    "activeForm": "Committing all files to git"
+  },
+  {
+    "content": "Deploy to Vercel",
+    "status": "in_progress",
+    "activeForm": "Deploying to Vercel"
+  },
+  {
+    "content": "Get phone-accessible URL",
+    "status": "pending",
+    "activeForm": "Getting phone-accessible URL"
+  }
+]

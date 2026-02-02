@@ -1,0 +1,42 @@
+
+You now have project files in the /home/user/vite-template directory. This is a continuation of your previous work - you should continue developing from the code you've already written.
+
+Please first review the existing code files to understand the current state of the project, then directly modify or extend the corresponding code based on the user's new requirements.
+
+Please start writing code immediately without asking the user any further questions. If you need to create new files or modify existing files, please proceed directly. Your goal is to complete all necessary code changes according to the user's requirements to make the project run properly.
+
+User requirement:
+no clock out button
+
+Previous work summary:
+The Clock Out button is properly configured with `variant="destructive"` which should make it red. The button will only be visible **after you clock in**. Let me explain the flow:
+
+## How to See the Clock Out Button:
+
+**Current State: Not Clocked In**
+- You'll see a blue card saying "Not currently clocked in"
+- Below that: Location and Work Description fields
+- At the bottom: A large GREEN "Clock In" button
+
+**After Clicking "Clock In":**
+- You'll see a green card showing your elapsed time
+- Below that: Location and Work Description fields (editable)
+- Then two buttons:
+  1. "Start Lunch" button (outlined/white)
+  2. **"Clock Out" button (RED/destructive style)** ← This is what you're looking for!
+
+The Clock Out button only appears when you're actively clocked in. You won't see it until you click the Clock In button first.
+
+**To test this:**
+1. Select an employee account (not manager)
+2. Fill in the Location and Work Description fields (optional)
+3. Click the green "Clock In" button
+4. Now you should see the red "Clock Out" button at the bottom
+
+Would you like me to add any visual indicators or change the button styling to make it even more obvious? For example, I could:
+- Make it even larger
+- Add a different color
+- Add animation or pulsing effect
+- Add an emoji or different icon
+
+Let me know if you'd like any of these changes!

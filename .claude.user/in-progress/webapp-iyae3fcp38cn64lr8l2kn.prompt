@@ -1,0 +1,100 @@
+
+You now have project files in the /home/user/vite-template directory. This is a continuation of your previous work - you should continue developing from the code you've already written.
+
+Please first review the existing code files to understand the current state of the project, then directly modify or extend the corresponding code based on the user's new requirements.
+
+Please start writing code immediately without asking the user any further questions. If you need to create new files or modify existing files, please proceed directly. Your goal is to complete all necessary code changes according to the user's requirements to make the project run properly.
+
+User requirement:
+I encountered an error in my application:
+
+### Error
+NotAllowedError: Failed to execute 'writeText' on 'Clipboard': The Clipboard API has been blocked because of a permissions policy applied to the current document. See https://crbug.com/414348233 for more details.
+
+### Stack
+NotAllowedError: Failed to execute 'writeText' on 'Clipboard': The Clipboard API has been blocked because of a permissions policy applied to the current document. See https://crbug.com/414348233 for more details.
+    at w (./dist/assets/index-CJZEKlgF.js:75:8468)
+    at Object.onClick [as current] (./dist/assets/index-CJZEKlgF.js:75:10829)
+    at ./dist/assets/index-CJZEKlgF.js:30:12198
+    at cd (./dist/assets/index-CJZEKlgF.js:10:116133)
+    at ./dist/assets/index-CJZEKlgF.js:10:121118
+    at sn (./dist/assets/index-CJZEKlgF.js:10:9007)
+    at md (./dist/assets/index-CJZEKlgF.js:10:117361)
+    at Xf (./dist/assets/index-CJZEKlgF.js:11:26505)
+    at Jf (./dist/assets/index-CJZEKlgF.js:11:26327)
+
+### Last UI Event
+trigger click event just now on button
+located at /src/routes/index.tsx:2123:14
+
+### Event Type
+window.unhandledrejection
+
+Can you help me fix this issue?
+
+Previous work summary:
+Perfect! I've successfully implemented the employee-only shareable link feature. Here's what was added:
+
+## Employee-Only Shareable Links Feature ✓
+
+### 1. **URL Parameter Auto-Login** ✓
+- Employees can now access the app via a special URL with their ID: `?employee={user_id}`
+- When visiting this URL, employees are automatically logged in to their account
+- No need to select from the user dropdown - they go directly to their view
+
+### 2. **Employee-Only Mode** ✓
+- When accessing via the employee link, the app enters "employee-only mode"
+- In this mode:
+  - **Title changes** to "My Time Tracking" (instead of "Time Tracking System")
+  - **No "Switch User" button** - employees can't switch to other accounts
+  - **Language toggle still available** - employees can choose English/Spanish
+  - **Only their own data visible**:
+    - Their own clock in/out records
+    - Their own time cards
+    - Their own sick days
+    - Their own hours worked
+  - **No access to**:
+    - Other employees' information
+    - Manager features
+    - Pay rate information
+    - Reports
+
+### 3. **Manager Features** ✓
+- **"Copy Employee Link" button** added to the Employees tab
+- Button only appears for Employee role users (not for managers)
+- Clicking the button:
+  - Generates the unique employee URL
+  - Copies it to clipboard
+  - Shows confirmation alert
+- Managers can then share these links via email, text, or any method
+
+### 4. **Bilingual Support** ✓
+- All new features translated to English and Spanish:
+  - "Copy Employee Link" / "Copiar Enlace de Empleado"
+  - "Employee link copied!" / "¡Enlace de empleado copiado!"
+  - "My Time Tracking" / "Mi Registro de Tiempo"
+
+### How It Works:
+
+1. **Manager generates link**: 
+   - Go to Employees tab
+   - Click "Copy Employee Link" for any employee
+   - Link is copied to clipboard (e.g., `https://yoursite.com/?employee=abc123`)
+
+2. **Share with employee**:
+   - Send the link via email, text message, or any communication method
+
+3. **Employee accesses their view**:
+   - Opens the link
+   - Automatically logged in as themselves
+   - Can only see and manage their own:
+     - Clock in/out
+     - Time tracking
+     - Sick days
+     - Hours worked
+   - **Cannot see**:
+     - Other employees' data
+     - Their hourly pay rate
+     - Manager features
+
+This provides secure, isolated access for each employee while maintaining full control for managers!

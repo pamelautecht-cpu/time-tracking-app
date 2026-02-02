@@ -1,0 +1,19 @@
+Implement the complete application described in the plan response below. Focus on creating functional, well-structured code that meets all specified requirements.
+
+**IMPLEMENTATION PLAN & REQUIREMENTS:**
+<plan_response>
+# Product Brief
+
+## Goal
+Enable employees to clock in and out in real-time to track their work hours, and enable managers to view and manage all employee time records.
+
+## Features
+1. **Real-time clock in/out** — Employees click a button to clock in at shift start and clock out at shift end, with system automatically recording timestamps
+2. **Active shift indicator** — Display current clocked-in status and elapsed time for employees currently on shift
+3. **Time card history** — Employees can view their own clock in/out records with calculated hours per shift
+4. **Manager dashboard** — Managers can view all employee time cards with filtering by employee name and date range
+5. **User roles** — System distinguishes between employee and manager accounts with appropriate access permissions
+6. **Time card editing** — Managers can manually adjust clock in/out times when corrections are needed
+7. **Total hours calculation** — Automatically calculate and display hours worked per shift, per day, and per week
+8. **Data persistence** — Use the platform-hosted persistent database to store user accounts, time card entries, and shift records
+</plan_response>

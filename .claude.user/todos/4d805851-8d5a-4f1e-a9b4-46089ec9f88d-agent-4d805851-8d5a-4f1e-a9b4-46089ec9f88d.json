@@ -1,0 +1,22 @@
+[
+  {
+    "content": "Connect local git to GitHub repository",
+    "status": "completed",
+    "activeForm": "Connecting local git to GitHub repository"
+  },
+  {
+    "content": "Guide user to upload code to GitHub",
+    "status": "in_progress",
+    "activeForm": "Guiding user to upload code to GitHub"
+  },
+  {
+    "content": "Import repository to Vercel",
+    "status": "pending",
+    "activeForm": "Importing repository to Vercel"
+  },
+  {
+    "content": "Get live URL for phone",
+    "status": "pending",
+    "activeForm": "Getting live URL for phone"
+  }
+]

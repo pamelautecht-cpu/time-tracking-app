@@ -1,0 +1,138 @@
+================================================================================
+                    📋 WHICH FILES TO UPLOAD TO GITHUB
+================================================================================
+
+You need to get files from /home/user/vite-template/ to GitHub.
+
+Here's EXACTLY which files you need:
+
+================================================================================
+                        ESSENTIAL FILES (MUST HAVE)
+================================================================================
+
+📁 FOLDERS:
+-----------
+✅ src/                     ← THE MOST IMPORTANT! Contains all your app code
+✅ config/                  ← Build configuration
+✅ public/                  ← Static assets (if exists)
+
+📄 ROOT FILES:
+--------------
+✅ package.json             ← Lists dependencies
+✅ package-lock.json        ← Locks dependency versions
+✅ vite.config.js           ← Vite build settings
+✅ tsconfig.json            ← TypeScript configuration
+✅ index.html               ← HTML entry point
+✅ vercel.json              ← Vercel routing config
+✅ README.md                ← Project description
+
+================================================================================
+                    OPTIONAL (Nice to have, but not critical)
+================================================================================
+
+📄 biome.json               ← Code formatting config
+📄 components.json          ← Component settings
+📄 eslint.config.js         ← Linting rules
+📄 vitest.config.js         ← Testing config
+
+================================================================================
+                        DO NOT UPLOAD (Skip These)
+================================================================================
+
+❌ node_modules/            ← Too big! Vercel will install automatically
+❌ dist/                    ← Build output - Vercel will generate this
+❌ .claude.user/            ← Development files, not needed
+❌ .build/                  ← Build artifacts
+❌ *.txt files              ← Documentation/guides (not needed for app)
+❌ *.md files (except README.md) ← Guides we created
+
+================================================================================
+                    MINIMUM FILES (If limited upload)
+================================================================================
+
+If you can ONLY upload a few files, upload these 3:
+
+1. 📁 src/                  ← Contains ALL your time-tracking app code
+2. 📄 package.json          ← Tells Vercel what to install
+3. 📄 index.html            ← Entry point
+
+Then add others if Vercel asks for them during deployment.
+
+================================================================================
+                HOW TO ACCESS THESE FILES
+================================================================================
+
+The files are at: /home/user/vite-template/
+
+COMMON SCENARIOS:
+
+1. E2B / Cloud IDE:
+   - Look for "Download workspace" or "Export project"
+   - Download as ZIP
+
+2. Remote Server via SFTP:
+   - Use FileZilla or WinSCP
+   - Connect to server
+   - Navigate to /home/user/vite-template/
+   - Download folders/files
+
+3. WSL (Windows Subsystem for Linux):
+   - Open File Explorer
+   - Address bar: \\wsl$\
+   - Navigate to /home/user/vite-template/
+   - Copy files to Windows
+
+4. Command Line (if available):
+   - Create a ZIP: tar -czf time-tracking.tar.gz src package.json package-lock.json vite.config.js tsconfig.json index.html vercel.json config/
+   - Download the ZIP file
+
+5. Terminal with Git Access:
+   - Just run: git push -u origin main
+   - No download needed!
+
+================================================================================
+                    TOTAL FILE COUNT
+================================================================================
+
+Essential folders/files: ~8 items
+Total files in src/: ~100+ files (but it's just ONE folder to upload)
+
+Upload time estimate: 2-5 minutes depending on connection
+
+================================================================================
+                WHAT THE FILES DO
+================================================================================
+
+src/routes/index.tsx        ← Your MAIN time-tracking app code
+package.json                ← Lists React, Vite, TanStack Router, etc.
+vite.config.js              ← Tells Vite how to build
+tsconfig.json               ← TypeScript rules
+index.html                  ← Loads your React app
+vercel.json                 ← Handles client-side routing
+
+================================================================================
+                    AFTER YOU UPLOAD
+================================================================================
+
+1. All files on GitHub ✅
+2. Go to Vercel.com
+3. Import repository
+4. Vercel reads package.json → Installs dependencies
+5. Vercel reads vite.config.js → Builds the app
+6. Vercel serves index.html → Your app is live!
+7. You get a URL → Open on phone!
+
+================================================================================
+
+NEED HELP DOWNLOADING?
+
+Tell me which environment you're using:
+- "I'm using E2B / Claude Code"
+- "I have SFTP access"
+- "I'm on WSL"
+- "I have terminal access"
+- "I don't know where this is"
+
+I'll give you exact download instructions!
+
+================================================================================

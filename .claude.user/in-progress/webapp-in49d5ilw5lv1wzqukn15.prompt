@@ -1,0 +1,85 @@
+
+You now have project files in the /home/user/vite-template directory. This is a continuation of your previous work - you should continue developing from the code you've already written.
+
+Please first review the existing code files to understand the current state of the project, then directly modify or extend the corresponding code based on the user's new requirements.
+
+Please start writing code immediately without asking the user any further questions. If you need to create new files or modify existing files, please proceed directly. Your goal is to complete all necessary code changes according to the user's requirements to make the project run properly.
+
+User requirement:
+Method 4: Terminal/Command Line (EASIEST!)
+
+Previous work summary:
+## 📥 HOW TO DOWNLOAD THE FILES
+
+I've created comprehensive guides to help you! The files are at `/home/user/vite-template/` which is on a server. Here's how to get them:
+
+---
+
+### 🎯 WHICH METHOD WORKS FOR YOU?
+
+**Method 1: E2B / Cloud IDE / Online Environment**
+- Look for "Download Workspace" or "Export Project" in your interface
+- Download as ZIP
+- Unzip on your computer
+
+**Method 2: SFTP (If you have server access)**
+- Use FileZilla (free): https://filezilla-project.org/
+- Connect to your server
+- Navigate to `/home/user/vite-template/`
+- Download the folder
+
+**Method 3: WSL (Windows Subsystem for Linux)**
+- Open File Explorer
+- Type in address bar: `\\wsl$\`
+- Navigate to `home/user/vite-template/`
+- Copy to your Windows folder
+
+**Method 4: Terminal/Command Line (EASIEST!)**
+- If you have terminal access, skip downloading entirely!
+- Just run these commands:
+```bash
+cd /home/user/vite-template
+git init
+git config user.email "pamelautecht@gmail.com"
+git config user.name "pamelautecht-cpu"
+git branch -M main
+git remote add origin https://github.com/pamelautecht-cpu/time-tracking-app.git
+git add .
+git commit -m "Add time-tracking app"
+git push -u origin main
+```
+- You'll need a GitHub Personal Access Token from: https://github.com/settings/tokens
+
+---
+
+### 📦 WHICH FILES TO DOWNLOAD:
+
+**Essential (must have):**
+- 📁 `src/` folder ← **MOST IMPORTANT - contains all your app code**
+- 📄 `package.json`
+- 📄 `package-lock.json`
+- 📄 `vite.config.js`
+- 📄 `tsconfig.json`
+- 📄 `index.html`
+- 📄 `vercel.json`
+
+**Skip these:**
+- ❌ `node_modules/` (too big, Vercel will install)
+- ❌ `dist/` (Vercel will build)
+- ❌ `.claude.user/` (development files)
+
+---
+
+### 📤 AFTER DOWNLOADING:
+
+1. Go to: https://github.com/pamelautecht-cpu/time-tracking-app
+2. Click: "uploading an existing file"
+3. Drag all the downloaded files
+4. Commit changes
+5. Go to Vercel → Import repository → Deploy!
+
+---
+
+**What environment are you using to access this code?** (E2B, remote server, WSL, or do you have terminal access?)
+
+I'll give you the exact steps for your specific situation!

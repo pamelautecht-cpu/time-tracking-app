@@ -1,0 +1,200 @@
+================================================================================
+              ✅ CHECKLIST: DEPLOY TIME-TRACKING APP ON VERCEL
+================================================================================
+
+You're on Vercel.com right now. Here's what to do:
+
+================================================================================
+                            SIMPLE CHECKLIST
+================================================================================
+
+THE PROBLEM:
+-----------
+❌ https://time-tracking-app-navy.vercel.app shows "Vite + React + TS" template
+✅ We need it to show "Employee Time Tracking" app
+
+THE SOLUTION:
+------------
+Update the code in your GitHub repository, then Vercel auto-deploys
+
+================================================================================
+                        WHAT TO DO ON VERCEL.COM
+================================================================================
+
+[ ] STEP 1: Find your project
+    - Look for: "time-tracking-app" in your dashboard
+    - Click on it
+
+[ ] STEP 2: Click "Settings" (top menu)
+
+[ ] STEP 3: Click "Git" in left sidebar
+    - Write down your GitHub repository name: _______________
+    - It might be: "vite-react" or "time-tracking-app"
+
+[ ] STEP 4: Verify these settings:
+    - Framework Preset: Vite ✅
+    - Build Command: npm run build ✅
+    - Output Directory: dist ✅
+
+Now you know which GitHub repo to update!
+
+================================================================================
+                      UPDATE YOUR GITHUB REPOSITORY
+================================================================================
+
+OPTION A: GitHub Desktop
+------------------------
+
+[ ] 1. Open GitHub Desktop on your computer
+
+[ ] 2. Find repository: ______________________ (name from Step 3)
+
+[ ] 3. If not there: File → Clone Repository → Select it
+
+[ ] 4. Click: Repository → Show in Finder/Explorer
+    - This opens the folder
+
+[ ] 5. DELETE all files in that folder
+    - Keep .git folder if you see it (it might be hidden)
+
+[ ] 6. COPY all files from: /home/user/vite-template/
+    - Paste into your GitHub repository folder
+
+    ⚠️ PROBLEM: /home/user/vite-template/ is on a SERVER
+    Solution options:
+    - Download it as ZIP
+    - Use file transfer from server to your computer
+    - Ask: "How do I get these files?"
+
+[ ] 7. Go back to GitHub Desktop
+    - You'll see MANY changed files
+
+[ ] 8. Bottom left:
+    - Summary: "Update with time tracking app"
+
+[ ] 9. Click "Commit to main"
+
+[ ] 10. Click "Push origin" (top right)
+
+[ ] 11. Wait 2 minutes
+
+[ ] 12. Check: https://time-tracking-app-navy.vercel.app
+    - Should show Employee Time Tracking! 🎉
+
+---
+
+OPTION B: GitHub Website Upload
+-------------------------------
+
+[ ] 1. Go to: https://github.com
+
+[ ] 2. Log in with your account
+
+[ ] 3. Find repository: ______________________ (name from Step 3)
+
+[ ] 4. Click: Add file → Upload files
+
+[ ] 5. Drag ALL files from: /home/user/vite-template/
+
+    ⚠️ PROBLEM: Can't access these files from your computer
+    Solution: Download them first, then upload
+
+[ ] 6. Write commit message: "Update with time tracking app"
+
+[ ] 7. Click "Commit changes"
+
+[ ] 8. Go to Vercel - watch deployment (1-2 minutes)
+
+[ ] 9. Check: https://time-tracking-app-navy.vercel.app
+
+---
+
+OPTION C: Create New Vercel Project (if updating is too hard)
+------------------------------------------------------------
+
+[ ] 1. On Vercel dashboard: Add New... → Project
+
+[ ] 2. Connect your GitHub repository
+
+[ ] 3. Import it
+
+[ ] 4. Configure:
+    Framework: Vite
+    Build Command: npm run build
+    Output Directory: dist
+
+[ ] 5. Click Deploy
+
+[ ] 6. Get new URL (might be different from time-tracking-app-navy)
+
+================================================================================
+                        THE CORE ISSUE TO SOLVE
+================================================================================
+
+📁 Your new app code is here: /home/user/vite-template/
+
+🎯 It needs to be here: Your GitHub repository (connected to Vercel)
+
+🚀 Then Vercel will: Automatically build and deploy it
+
+================================================================================
+                          HOW TO GET THE FILES
+================================================================================
+
+The files are on a SERVER at: /home/user/vite-template/
+
+Options to get them:
+
+[ ] 1. Ask me: "Create a downloadable ZIP"
+    - I'll package everything for download
+
+[ ] 2. Ask me: "Deploy using CLI"
+    - I'll try command-line deployment
+
+[ ] 3. Use file transfer if you have server access:
+    - SCP, FTP, or download from your hosting panel
+
+[ ] 4. Ask your dev team for the files
+
+================================================================================
+                        VERIFY IT WORKED
+================================================================================
+
+After deployment:
+
+[ ] 1. Go to: https://time-tracking-app-navy.vercel.app
+
+[ ] 2. You should see:
+    ✅ "Employee Time Tracking" as title
+    ✅ Language toggle (EN | ES)
+    ✅ "Login as Manager" button
+    ✅ "Login as Employee" button
+
+[ ] 3. NOT see:
+    ❌ "Vite + React + TS"
+    ❌ "Edit src/App.tsx and save to test HMR"
+
+[ ] 4. Click "Login as Manager"
+    ✅ Should show: Alice Johnson
+    ✅ Should see employee list
+    ✅ Can add new employee
+
+IF YOU SEE ALL THIS → TIME-TRACKING APP IS LOADED! 🎉
+
+================================================================================
+                          WHERE ARE YOU STUCK?
+================================================================================
+
+Tell me exactly where you are:
+
+[ ] "I'm on Vercel dashboard, looking at time-tracking-app project"
+[ ] "I can't find the GitHub repository"
+[ ] "I don't know how to download /home/user/vite-template/"
+[ ] "I uploaded to GitHub but Vercel didn't deploy"
+[ ] "Build failed on Vercel"
+[ ] "Still shows template after deploying"
+[ ] "I need a completely different method"
+
+I'll help you with the exact step you're stuck on! 💪
+
+================================================================================

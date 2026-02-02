@@ -1,0 +1,164 @@
+{
+  "id": "102019c0ae9a2467b359df325d86b6625af",
+  "version": "102019c1cfd419d792289435971f2cb54b3",
+  "schema": {
+    "name": "sick_day",
+    "description": "Tracks employee sick day absences separately from work time cards.",
+    "fields": [
+      {
+        "name": "id",
+        "description": "Unique identifier for the sick day entry.",
+        "type": 1,
+        "compliance": {
+          "confidentiality": 1,
+          "reason": "Public identifier"
+        }
+      },
+      {
+        "name": "data_creator",
+        "description": "id of the user who creates the record",
+        "type": 1,
+        "compliance": {
+          "confidentiality": 2,
+          "reason": "Internal audit"
+        }
+      },
+      {
+        "name": "data_updater",
+        "description": "id of the user who updates the record",
+        "type": 1,
+        "compliance": {
+          "confidentiality": 2,
+          "reason": "Internal audit"
+        }
+      },
+      {
+        "name": "create_time",
+        "description": "create time in timestamp unix",
+        "type": 1,
+        "compliance": {
+          "confidentiality": 1,
+          "reason": "System timestamp"
+        },
+        "format": "timestamp"
+      },
+      {
+        "name": "update_time",
+        "description": "update time in timestamp unix",
+        "type": 1,
+        "compliance": {
+          "confidentiality": 1,
+          "reason": "System timestamp"
+        },
+        "format": "timestamp"
+      },
+      {
+        "name": "user_id",
+        "description": "ID of the user taking sick leave.",
+        "type": 1,
+        "compliance": {
+          "confidentiality": 2,
+          "reason": "Internal HR reference"
+        }
+      },
+      {
+        "name": "sick_date",
+        "description": "Date of the sick day.",
+        "type": 1,
+        "compliance": {
+          "confidentiality": 2,
+          "reason": "HR data"
+        },
+        "format": "date"
+      },
+      {
+        "name": "hours",
+        "description": "Number of hours of sick leave taken, can be partial.",
+        "type": 2,
+        "compliance": {
+          "confidentiality": 2,
+          "reason": "HR data"
+        },
+        "numeric": "float"
+      },
+      {
+        "name": "notes",
+        "description": "Optional description of reason for absence.",
+        "type": 1,
+        "compliance": {
+          "confidentiality": 3,
+          "reason": "Potential sensitive medical information"
+        },
+        "nullable": true
+      }
+    ],
+    "indexes": [
+      {
+        "fields": [
+          "id"
+        ],
+        "unique": true,
+        "primary": true,
+        "order": false
+      },
+      {
+        "fields": [
+          "user_id"
+        ],
+        "order": false
+      },
+      {
+        "fields": [
+          "sick_date"
+        ],
+        "order": true
+      },
+      {
+        "fields": [
+          "sick_date",
+          "user_id"
+        ],
+        "order": false
+      },
+      {
+        "fields": [
+          "data_creator"
+        ],
+        "order": false
+      },
+      {
+        "fields": [
+          "data_updater"
+        ],
+        "order": false
+      }
+    ],
+    "relations": [
+      {
+        "referencing_fields": [
+          "user_id"
+        ],
+        "referenced_entity": {
+          "name": "user"
+        },
+        "referenced_fields": [
+          "id"
+        ],
+        "cascade": true
+      }
+    ]
+  },
+  "task": {
+    "id": "698040b956ef0bb86b149560",
+    "root": "6979037d768a7cf710e2a1b8",
+    "project": "6979037d768a7cf710e2a1b7",
+    "user": "38c1d360-e051-70bf-b429-cc4c6d02d858"
+  },
+  "namespace": {
+    "id": "01987547fc6c72ecb453bd2736bd4ea0",
+    "tenant": 2,
+    "name": "global-1",
+    "default": true
+  },
+  "revision": 1
+}

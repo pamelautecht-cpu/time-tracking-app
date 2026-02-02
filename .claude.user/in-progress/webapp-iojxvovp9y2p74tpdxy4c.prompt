@@ -1,0 +1,141 @@
+
+You now have project files in the /home/user/vite-template directory. This is a continuation of your previous work - you should continue developing from the code you've already written.
+
+Please first review the existing code files to understand the current state of the project, then directly modify or extend the corresponding code based on the user's new requirements.
+
+Please start writing code immediately without asking the user any further questions. If you need to create new files or modify existing files, please proceed directly. Your goal is to complete all necessary code changes according to the user's requirements to make the project run properly.
+
+User requirement:
+To add an employee, can we add a phone number 
+
+Previous work summary:
+Perfect! I've successfully implemented all three requested features. Here's a comprehensive summary:
+
+## ✅ **All Features Implemented Successfully!**
+
+### **1. User Management** 👥
+
+**Manager Dashboard - Employees Tab:**
+- **Add Employee**: Create new employee accounts with name, email, and role (Employee/Manager)
+- **Edit Employee**: Update existing employee information
+- **Delete Employee**: Remove employees with confirmation dialog
+- **View All Employees**: Table showing all users with their roles
+- **Full CRUD Operations**: Create, Read, Update, Delete for employee records
+
+**How to Use:**
+1. Log in as Manager (Mike Manager)
+2. Click "Employees" tab
+3. Click "Add Employee" button to create new employees
+4. Click "Edit" on any employee to modify their information
+5. Click "Delete" to remove employees (with confirmation)
+
+---
+
+### **2. Weekly Reports** 📊
+
+**Manager Dashboard - Reports Tab:**
+- **Week Selection**: Pick any week to view reports (defaults to current week)
+- **Regular Hours**: Shows hours up to 40/week per employee
+- **Overtime Hours**: Automatically calculates hours beyond 40/week
+- **Total Hours**: Sum of regular + overtime
+- **Overtime Alert Badge**: Visual indicator when employees work overtime
+- **Per-Employee Breakdown**: See each employee's hours separately
+
+**Overtime Calculation:**
+- 0-40 hours = Regular hours
+- 40+ hours = Regular (40) + Overtime (excess)
+- Example: 45 hours = 40 regular + 5 overtime
+
+**How to Use:**
+1. Log in as Manager
+2. Click "Reports" tab
+3. Select a week using the date picker
+4. View regular/overtime breakdown for all employees
+5. Orange "Overtime Alert" badges highlight employees with overtime
+
+---
+
+### **3. Manual Time Card Entry** ✏️
+
+**For Employees:**
+- **"Add Time Card" button** in Clock In/Out section
+- Manually add missed shifts
+- Fill in clock in/out times, location, work description, and lunch breaks
+- Perfect for when employees forget to clock in
+
+**For Managers:**
+- **"Add Time Card" button** in manager dashboard
+- Select employee from dropdown
+- Add time cards for any employee
+- Edit existing time cards with full control
+- Fix errors or add retroactive entries
+
+**Features:**
+- Pre-filled default times (9 AM - 5 PM today)
+- Optional lunch break times (12 PM - 1 PM by default)
+- Automatic hours calculation with lunch deduction
+- All fields editable
+
+**How to Use (Employee):**
+1. Click "Add Time Card" button (top right of Clock In/Out card)
+2. Enter clock in/out times
+3. Add location and work description
+4. Optionally add lunch times
+5. Click "Save Changes"
+
+**How to Use (Manager):**
+1. Go to Time Cards tab
+2. Click "Add Time Card" button
+3. Select employee from dropdown
+4. Fill in all time details
+5. Save to add to employee's record
+
+---
+
+### **4. Complete Spanish Translation** 🌐
+
+All new features fully translated:
+- "Empleados" (Employees)
+- "Agregar Empleado" (Add Employee)
+- "Informes" (Reports)
+- "Informe Semanal" (Weekly Report)
+- "Tiempo Extra" (Overtime)
+- "Alerta de Tiempo Extra" (Overtime Alert)
+- "Agregar Tarjeta" (Add Time Card)
+- "Entrada Manual" (Manual Entry)
+
+---
+
+### **Manager Navigation (3 Tabs):**
+
+1. **Time Cards Tab**
+   - View all employee time cards
+   - Filter by employee/date
+   - Edit any time card
+   - Add manual entries
+   - Summary cards (Total Employees, Hours Today, Hours This Week)
+
+2. **Reports Tab**
+   - Weekly reports with overtime tracking
+   - Regular vs Overtime hours breakdown
+   - Overtime alerts
+   - Week selection
+
+3. **Employees Tab**
+   - Employee management
+   - Add/Edit/Delete employees
+   - View roles and contact info
+
+---
+
+### **Key Improvements:**
+
+✅ **User Management**: Full employee lifecycle management
+✅ **Weekly Reports**: Professional reports with overtime calculation
+✅ **Overtime Tracking**: Automatic 40-hour threshold
+✅ **Manual Entry**: Fix forgotten clock-ins easily
+✅ **Bilingual**: Complete English/Spanish support
+✅ **Type-Safe**: All TypeScript validations passing
+✅ **Production Ready**: Clean, professional UI
+
+The time tracking system is now enterprise-ready with comprehensive management features!
